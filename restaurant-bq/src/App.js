@@ -1,16 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Mesero } from "./Componentes/Mesero";
-import { Historial } from "./Componentes/Historial";
-import { Cocina } from "./Componentes/Cocina";
-import { Opciones } from "./Componentes/Opciones";
-import { Home } from "./Componentes/Home";
+import { Mesero } from "./Componentes/Mesero/Mesero";
+import { Historial } from "./Componentes/Historial/Historial";
+import { Cocina } from "./Componentes/Cocina/Cocina";
+import { Opciones } from "./Componentes/Opciones/Opciones";
+import { Home } from "./Componentes/Home/Home";
 
 function App() {
   return (
     <Router>
       <div>
-      <Switch>
+        <Switch>
           <Route path="/mesero">
             <Mesero />
           </Route>
@@ -29,7 +29,7 @@ function App() {
         </Switch>
       </div>
     </Router> 
-   );
+  );
 }
 
 export default App;
