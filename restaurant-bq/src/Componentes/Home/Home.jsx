@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 
-const Home = () =>{
-    return(
-        <h1>Vista del Home </h1>
-    );
-}
+const Home = () => {
+  return (
+    <Fragment>
+      <h1>Vista del Home </h1>
+    </Fragment>
+  );
+};
 export { Home };
