@@ -5,27 +5,19 @@ import { Historial } from "./Componentes/Historial/Historial";
 import { Cocina } from "./Componentes/Cocina/Cocina";
 import { Opciones } from "./Componentes/Opciones/Opciones";
 import { Home } from "./Componentes/Home/Home";
+import { Errors } from "./Componentes/Error/error.jsx"
 
 function App() {
   return (
     <Router>
       <div>
         <Switch>
-          <Route path="/mesero">
-            <Mesero />
-          </Route>
-          <Route path="/historial">
-            <Historial />
-          </Route>
-          <Route path="/cocina">
-            <Cocina />
-          </Route>
-          <Route path="/opciones">
-            <Opciones />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+        <Route path="/mesero" component={Mesero} />
+          <Route path="/historial" component={Historial} />
+          <Route path="/cocina" component={Cocina} />
+          <Route path="/opciones" component={Opciones} />
+          <Route path="/" exact component={Home} />
+          <Route component={Errors} />
         </Switch>
       </div>
     </Router> 

@@ -1,0 +1,82 @@
+{
+  "menu": {
+    "café americano": {
+      "type": "breakfast",
+      "price": "5",
+      "image": ""
+    },
+    "café con leche": {
+      "type": "breakfast",
+      "price": "7",
+      "image": ""
+    },
+    "sandwich de jamón y queso": {
+      "type": "breakfast",
+      "price": "10",
+      "image": ""
+    },
+    "jugo de frutas natural": {
+      "type": "breakfast",
+      "price": "7",
+      "image": ""
+    },
+    "hamburguesa simple": {
+      "type": "lunch",
+      "price": "10",
+      "image": "",
+      "protein": {
+        "beef": "Res",
+        "chicken": "Pollo",
+        "veggie": "Vegetariana"
+      },
+      "extras": {
+        "egg": "huevo",
+        "cheese": "queso"
+      }
+    },
+    "hamburguesa doble": {
+      "type": "lunch",
+      "price": "15",
+      "image": "",
+      "protein": {
+        "beef": "Res",
+        "chicken": "Pollo",
+        "veggie": "Vegetariana"
+      },
+      "extras": {
+        "egg": "huevo",
+        "cheese": "queso"
+      }
+    },
+    "papas fritas": {
+      "type": "lunch",
+      "price": "5",
+      "image": ""
+    },
+    "aros de cebolla": {
+      "type": "lunch",
+      "price": "5",
+      "image": ""
+    },
+    "agua 500ml": {
+      "type": "lunch",
+      "price": "5",
+      "image": ""
+    },
+    "agua 750ml": {
+      "type": "lunch",
+      "price": "7",
+      "image": ""
+    },
+    "gaseosa 500ml": {
+      "type": "lunch",
+      "price": "7",
+      "image": ""
+    },
+    "gaseosa 750ml": {
+      "type": "lunch",
+      "price": "10",
+      "image": ""
+    }
+  }
+}

@@ -3,7 +3,15 @@ import React, { Fragment } from "react";
 const Home = () => {
   return (
     <Fragment>
-      <h1>Vista del Home </h1>
+      <div className="container-home">
+        <img>
+        
+        </img>
+        <div>
+          <a href="/mesero">MESERO</a>
+          <a href="/cocina">JEFE DE COCINA</a>
+        </div>
+      </div>
     </Fragment>
   );
 };
