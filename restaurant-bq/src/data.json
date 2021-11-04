@@ -30,8 +30,8 @@
         "veggie": "Vegetariana"
       },
       "extras": {
-        "egg": "huevo",
-        "cheese": "queso"
+        "huevo": "1",
+        "queso": "1"
       }
     },
     "hamburguesa doble": {
@@ -44,8 +44,8 @@
         "veggie": "Vegetariana"
       },
       "extras": {
-        "egg": "huevo",
-        "cheese": "queso"
+        "huevo": "1",
+        "queso": "1"
       }
     },
     "papas fritas": {
