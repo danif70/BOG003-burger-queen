@@ -6,10 +6,10 @@ const Home = () => {
   return (
     <Fragment>
       <div className="container-home">
-        <img src={Logo}/>
-        <div>
-          <a href="/mesero">MESERO</a>
-          <a href="/cocina">JEFE DE COCINA</a>
+        <img className="logo-home" src={Logo}/>
+        <div className="home-container-buttons">
+          <a className="home-buttons" href="/mesero">MESERO</a>
+          <a className="home-buttons" href="/cocina">JEFE DE COCINA</a>
         </div>
       </div>
     </Fragment>
