@@ -1,23 +1,24 @@
-.container-home{
- background-color: #323030;
-
-}  
-
-.logo-home{
-    width: 60%;
-   
+.container-home {
+  background-color: #323030;
 }
 
-.home-container-buttons{
-     display: flex; 
-    justify-content: space-evenly; 
-    
-}  
+.logo-home {
+  width: 60%;
+  padding-top: 15%;
+}
 
-.home-buttons{
-    width: 25%;
-    font-size: 180%;
-    border-radius: 20px;
-    font-family: "Monserrat", sans-serif;
+.home-container-buttons {
+  padding-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.home-buttons {
+  
+  width: 25%;
+  font-size: 180%;
+  font-weight: bold;
+  /* border: 10px  rgba(255, 225, 69, 1); */
+  border-radius: 20px;
+  font-family: "Monserrat", sans-serif;
 }
