@@ -5,11 +5,11 @@ import Logo from '../Imagenes/logo.png'
 const Home = () => {
   return (
     <Fragment>
-      <div className="container-home">
-        <img className="logo-home" src={Logo}/>
+      <div className="container-home vh-100">
+        <img className="logo-home rounded mx-auto d-block" src={Logo}/>
         <div className="home-container-buttons">
-          <a className="home-buttons" href="/mesero">MESERO</a>
-          <a className="home-buttons" href="/cocina">JEFE DE COCINA</a>
+          <a className="home-buttons btn btn-outline-warning" href="/mesero">MESERO</a>
+          <a className="home-buttons btn btn-outline-warning" href="/cocina">JEFE DE COCINA</a>
         </div>
       </div>
     </Fragment>
