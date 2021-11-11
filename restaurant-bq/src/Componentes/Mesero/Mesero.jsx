@@ -1,27 +1,27 @@
-import React, { useState, Fragment, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Header } from "../Header/Header";
 import { BtnMenu } from "../BotonesMenu/Botonesmenu";
 import "./Mesero.css";
 
 const Mesero = () => {
- 
-const [data, setDataBf] = useState([]);
-  useEffect(() => {
-    getData();
-  }, []);
+  const [dataState, setDataState] = useState([]);
+    useEffect(() => {
+      getProduct();
+  }, [])
 
-  const getData = () => {
-    fetch("data2.json")
-      .then(data => data.json())
-      // .then((data) => setDataBf(data))
-      .then(data=> console.log(data))
-  };
+  const getProduct = () => {
+      fetch("data2.json")
+        .then(product => product.json())
+        /* .then(data => setDataState(data))  */
+        .then(dataState=> console.log("Mesero",dataState))
+  }
 
-  return (
+   return (
     <Fragment>
       <div className="container-waiter vh-100">
         <Header />
-        <BtnMenu  />
+        <BtnMenu data = {getProduct} />
+       
       </div>
     </Fragment>
   );
