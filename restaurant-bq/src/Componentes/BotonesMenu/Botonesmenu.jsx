@@ -8,6 +8,7 @@ const BtnMenu = ({data}) => {
   return (
     <Fragment>
       <div className="container-btn-menu">
+       
       <button
           onClick={() => {
             setMenu("DESAYUNOS");
@@ -23,14 +24,15 @@ const BtnMenu = ({data}) => {
           className="btn-menu btn btn-outline-warning"
         >
           COMIDAS
-        </button>)
-         {data
-          .filter((data) => data.type === menu)
-          .map((item) => (
-            <Cards key={item.id} dataProduct={item} />
-          ))} 
+        </button>
+        {data
+    .filter((data) => data.type === menu)
+    .map((item) => (
+      <Cards key={item.id} dataProduct={item} />
+    ))}
       </div>
     </Fragment>
   );
+  
 };
 export { BtnMenu };
