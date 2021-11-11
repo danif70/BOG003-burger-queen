@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import  { Fragment } from "react";
-import { BreakfastMenu } from "../Menus/MenuDesayuno";
-import { LunchMenu } from "../Menus/MenuAlmuerzo";
+import { Menus } from "../Menus/Menu";
+//import { LunchMenu } from "../Menus/MenuAlmuerzo";
 
 const BtnMenu = () => {
   const [bfMenu, setBfMenu] = useState("DESAYUNOS");
@@ -12,7 +12,7 @@ const BtnMenu = () => {
       <div className="container-btn-menu">
         <button onClick={()=>{setBfMenu("DESAYUNOS")}} className="btn-menu btn btn-outline-warning">DESAYUNOS</button>
         <button onClick={()=>{setBfMenu("COMIDAS")}} className="btn-menu btn btn-outline-warning">COMIDAS</button>
-      {bfMenu === "DESAYUNOS"?<BreakfastMenu />: <LunchMenu />}
+     {/* {bfMenu === "DESAYUNOS"?: } */}
 
       </div>
     </Fragment>

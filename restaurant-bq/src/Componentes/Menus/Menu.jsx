@@ -2,18 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./MenuDesayuno.css";
 //import capuccino from '../Imagenes/capuccino.png'
 
-const BreakfastMenu = () => {
-  const [data, setDataBf] = useState([]);
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = () => {
-    fetch("data2.json")
-      .then((data) => data.json())
-      .then((data) => setDataBf(data));
-    //.then(data=> console.log(data))
-  };
+const Menus = () => {
+ 
 
   return (
     <section className="container-breakfast-menu row row-cols-1 row-cols-md-2 g-4 w-50">
@@ -38,4 +28,4 @@ const BreakfastMenu = () => {
   );
 };
 
-export { BreakfastMenu };
+export { Menus };
