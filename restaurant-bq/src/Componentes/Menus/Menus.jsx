@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './MenuDesayuno.css'
+
 //import capuccino from '../Imagenes/capuccino.png'
 
-const BreakfastMenu = () => {
-    const [data, setDataBf] = useState([]);
+const Menus = () => {
+    /* const [data, setDataBf] = useState([]);
     useEffect(() => {
         getData();
     }, [])
@@ -13,11 +14,12 @@ const BreakfastMenu = () => {
             .then(data => data.json())
             .then(data => setDataBf(data))
             //.then(data=> console.log(data))
-    }
+    } */
 
     return (
         <section className="container-breakfast-menu row row-cols-1 row-cols-md-2 g-4 w-50">
-            {
+            <h1>Hola esto es breakfastMenu</h1>
+           {/*  {
                 data.filter((data) => data.type=== "DESAYUNOS").map((item)=>(
                     <div key={item.id}>
                         <div className="card text-center col-sm-8 card bg-light mb-3 w-100" >
@@ -32,11 +34,11 @@ const BreakfastMenu = () => {
                         
                     </div>       
                 ))
-            }
+            } */}
         </section>
         
     )
 }
 
-export { BreakfastMenu };
+export { Menus };
 

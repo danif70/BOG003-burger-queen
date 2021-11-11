@@ -1,104 +1,94 @@
-[
-  {
-    "id": "1",
-    "name": "Café Americano",
-    "type": "DESAYUNOS",
-    "price": "$5",
-    "image": ""
-  },
-  {
-    "id": "2",
-    "name": "Café con Leche",
-    "type": "DESAYUNOS",
-    "price": "$7",
-    "image": "../Imagenes/capuccino.png"
-  },
-  {
-    "id": "3",
-    "name": "Sandwich de Jamón y Queso",
-    "type": "DESAYUNOS",
-    "price": "$10",
-    "image": ""
-  },
-  {
-    "id": "4",
-    "name": "Jugo de Frutas natural",
-    "type": "DESAYUNOS",
-    "price": "$7",
-    "image": ""
-  },
-  {
-    "id": "5",
-    "name": "Hamburguesa Simple",
-    "type": "COMIDAS",
-    "price": "$10",
-    "image": "",
-    "protein": {
-      "beef": "Res",
-      "chicken": "Pollo",
-      "veggie": "Vegetariana"
+{
+  "Product": {
+    "1": {
+      "name": "Café Americano",
+      "type": "DESAYUNOS",
+      "price": "$5",
+      "image": ""
     },
-    "extras": {
-      "huevo": "$1",
-      "queso": "$1"
-    }
-  },
-  {
-    "id": "6",
-    "name": "Hamburguesa Doble",
-    "type": "COMIDAS",
-    "price": "$15",
-    "image": "",
-    "protein": {
-      "beef": "Res",
-      "chicken": "Pollo",
-      "veggie": "Vegetariana"
+    "2": {
+      "name": "Café con Leche",
+      "type": "DESAYUNOS",
+      "price": "$7",
+      "image": "../Imagenes/capuccino.png"
     },
-    "extras": {
-      "huevo": "$1",
-      "queso": "$1"
+    "3": {
+      "name": "Sandwich de Jamón y Queso",
+      "type": "DESAYUNOS",
+      "price": "$10",
+      "image": ""
+    },
+    "4": {
+      "name": "Jugo de Frutas natural",
+      "type": "DESAYUNOS",
+      "price": "$7",
+      "image": ""
+    },
+    "5": {
+      "name": "Hamburguesa Simple",
+      "type": "COMIDAS",
+      "price": "$10",
+      "image": "",
+      "protein": {
+        "beef": "Res",
+        "chicken": "Pollo",
+        "veggie": "Vegetariana"
+      },
+      "extras": {
+        "huevo": "$1",
+        "queso": "$1"
+      }
+    },
+    "6": {
+      "name": "Hamburguesa Doble",
+      "type": "COMIDAS",
+      "price": "$15",
+      "image": "",
+      "protein": {
+        "beef": "Res",
+        "chicken": "Pollo",
+        "veggie": "Vegetariana"
+      },
+      "extras": {
+        "huevo": "$1",
+        "queso": "$1"
+      }
+    },
+    "7": {
+      "name": "Papas Fritas",
+      "type": "COMIDAS",
+      "price": "$5",
+      "image": ""
+    },
+    "8": {
+      "name": "Aros de Cebolla",
+      "type": "COMIDAS",
+      "price": "$5",
+      "image": ""
+    },
+    "9": {
+      "name": "Agua 500ml",
+      "type": "COMIDAS",
+      "price": "$5",
+      "image": ""
+    },
+    "10": {
+      "name": "Agua 750ml",
+      "type": "COMIDAS",
+      "price": "$7",
+      "image": ""
+    },
+    "11": {
+      "name": "Gaseosa 500ml",
+      "type": "COMIDAS",
+      "price": "$7",
+      "image": ""
+    },
+    "12": {
+      "name": "Gaseosa 750ml",
+      "type": "COMIDAS",
+      "price": "$10",
+      "image": ""
     }
-  },
-  {
-    "id": "7",
-    "name": "Papas Fritas",
-    "type": "COMIDAS",
-    "price": "$5",
-    "image": ""
-  },
-  {
-    "id": "8",
-    "name": "Aros de Cebolla",
-    "type": "COMIDAS",
-    "price": "$5",
-    "image": ""
-  },
-  {
-    "id": "9",
-    "name": "Agua 500ml",
-    "type": "COMIDAS",
-    "price": "$5",
-    "image": ""
-  },
-  {
-    "id": "10",
-    "name": "Agua 750ml",
-    "type": "COMIDAS",
-    "price": "$7",
-    "image": ""
-  },
-  {
-    "id": "11",
-    "name": "Gaseosa 500ml",
-    "type": "COMIDAS",
-    "price": "$7",
-    "image": ""
-  },
-  {
-    "id": "12",
-    "name": "Gaseosa 750ml",
-    "type": "COMIDAS",
-    "price": "$10",
-    "image": ""
   }
-]
+}
