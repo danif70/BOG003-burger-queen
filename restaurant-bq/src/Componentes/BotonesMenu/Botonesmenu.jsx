@@ -1,25 +1,36 @@
 import React, { useState } from "react";
-import  { Fragment } from "react";
-import { Menus } from "../Menus/Menus";
-/* import { LunchMenu } from "../Menus/MenuAlmuerzo"; */
+import { Fragment } from "react";
+import { Cards } from "../Cards/Cards";
 
-const BtnMenu = (props) => {
-
-  console.log(data.type);
+const BtnMenu = ({data}) => {
   const [menu, setMenu] = useState("DESAYUNOS");
-  /* const [lunchMenu, setLunchMenu] = useState(false);
-   */
+
   return (
     <Fragment>
       <div className="container-btn-menu">
-        <button onClick={()=>{setMenu("DESAYUNOS")}} className="btn-menu btn btn-outline-warning">DESAYUNOS</button>
-       {/*  {bfMenu?<BreakfastMenu />:""}  */}
-        <button onClick={()=>{setMenu("COMIDAS")}} className="btn-menu btn btn-outline-warning">COMIDAS</button>
-        {/* {lunchMenu?<LunchMenu />:""}  */}
-      {menu === "DESAYUNOS"?<Menus />: "Hola" }
-
+      <button
+          onClick={() => {
+            setMenu("DESAYUNOS");
+          }}
+          className="btn-menu btn btn-outline-warning"
+        >
+          DESAYUNOS
+        </button>
+        <button
+          onClick={() => {
+            setMenu("COMIDAS");
+          }}
+          className="btn-menu btn btn-outline-warning"
+        >
+          COMIDAS
+        </button>)
+         {data
+          .filter((data) => data.type === menu)
+          .map((item) => (
+            <Cards key={item.id} dataProduct={item} />
+          ))} 
       </div>
     </Fragment>
-  )
+  );
 };
 export { BtnMenu };
