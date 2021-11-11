@@ -11,9 +11,7 @@ const BtnMenu = () => {
     <Fragment>
       <div className="container-btn-menu">
         <button onClick={()=>{setBfMenu("DESAYUNOS")}} className="btn-menu btn btn-outline-warning">DESAYUNOS</button>
-       {/*  {bfMenu?<BreakfastMenu />:""}  */}
         <button onClick={()=>{setBfMenu("COMIDAS")}} className="btn-menu btn btn-outline-warning">COMIDAS</button>
-        {/* {lunchMenu?<LunchMenu />:""}  */}
       {bfMenu === "DESAYUNOS"?<BreakfastMenu />: <LunchMenu />}
 
       </div>
