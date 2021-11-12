@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import './Home.css'
+import '../Styles/Home.css'
 import Logo from '../Imagenes/logo.png'
 
 const Home = () => {

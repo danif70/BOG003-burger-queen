@@ -1,0 +1,15 @@
+.container-btn-menu {
+  display: flex;
+  /* border: 5px solid rgb(0, 255, 98); */
+  width: 50%;
+  justify-content: space-evenly;
+  margin-left: 2%;
+}
+.btn-menu {
+  width: 40%;
+  margin-top: 8%;
+  font-size: 150%;
+  font-weight: bold;
+  border-radius: 20px;
+  font-family: "Monserrat", sans-serif;
+}

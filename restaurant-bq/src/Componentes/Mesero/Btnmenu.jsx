@@ -1,6 +1,6 @@
 import React from 'react';
 import { Fragment } from 'react';
-import './Btnmenu.css';
+import '../Styles/Btnmenu.css';
 
 const BtnMenu = ({ setMenu }) => {
   return (
@@ -18,7 +18,7 @@ const BtnMenu = ({ setMenu }) => {
           onClick={() => {
             setMenu('COMIDAS');
           }}
-          className='btn-menu btn btn-outline-warning'
+          className='btn-menu btn btn-outline-warning '
         >
           COMIDAS
         </button>
