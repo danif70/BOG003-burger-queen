@@ -11,7 +11,7 @@
     "name": "Café con Leche",
     "type": "DESAYUNOS",
     "price": "$7",
-    "image": "../Imagenes/capuccino.png"
+    "image": "./ProductsImg/capuccino.png"
   },
   {
     "id": "3",
