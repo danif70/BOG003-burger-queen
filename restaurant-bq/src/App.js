@@ -5,7 +5,7 @@ import { Historial } from "./Componentes/Historial/Historial";
 import { Cocina } from "./Componentes/Cocina/Cocina";
 import { Opciones } from "./Componentes/Opciones/Opciones";
 import { Home } from "./Componentes/Home/Home";
-import { Errors } from "./Componentes/Error/error.jsx"
+import { Errors } from "./Componentes/Error/Error.jsx"
 
 function App() {
   return (
