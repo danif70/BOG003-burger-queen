@@ -3,7 +3,7 @@ import Logo from '../Imagenes/logo.png'
 import AddImg from '../Imagenes/boton-mas.png'
 import Bell from '../Imagenes/campana.png'
 import HomeImg from '../Imagenes/casa.png'
-import "./Header.css"
+import "../Styles/Header.css"
 
 
 const Header = () => {

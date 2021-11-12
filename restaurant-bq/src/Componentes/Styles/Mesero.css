@@ -1,0 +1,13 @@
+.container-waiter{
+  background-color: #323030;
+ 
+}
+.container-menu {
+  /* border: 5px solid red; */
+  background-color: rgba(238, 238, 238, 0.15);
+  height: 700px;
+  margin-top: 40px;
+  border-radius: 20px;
+  margin-left: 2%;
+  width:50%;
+}
