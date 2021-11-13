@@ -3,9 +3,9 @@ import  { Fragment } from "react";
 import { Menus } from "../Menus/Menus";
 /* import { LunchMenu } from "../Menus/MenuAlmuerzo"; */
 
-const BtnMenu = (props) => {
+const BtnMenu = (data) => {
 
-  console.log(data.type);
+  //console.log(data.type);
   const [menu, setMenu] = useState("DESAYUNOS");
   /* const [lunchMenu, setLunchMenu] = useState(false);
    */

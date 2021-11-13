@@ -12,7 +12,7 @@ const Mesero = () => {
   const getProduct = () => {
       fetch("data2.json")
         .then(product => product.json())
-        /* .then(data => setDataState(data))  */
+        .then(data => setDataState(data))
         .then(dataState=> console.log("Mesero",dataState))
   }
 
