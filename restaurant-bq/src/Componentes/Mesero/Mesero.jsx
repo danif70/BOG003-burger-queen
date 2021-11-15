@@ -6,31 +6,40 @@ import "./Mesero.css";
 
 const Mesero = () => {
   const [dataState, setDataState] = useState([]);
- 
-    useEffect(() => {
+  const [menu, setMenu] = useState("DESAYUNO");
+
+   useEffect(() => {
       getProduct();
   }, [])
 
   const getProduct = () => {
-      fetch("data2.json")
+     fetch("data2.json")
         .then(product => product.json())
-        .then(data => setDataState(data))
-        //.then(dataState=> console.log("Mesero",dataState))
-  }
- 
+        .then(data => setDataState(data)) 
+        /* .then(dataState=> console.log("Mesero",dataState))  */
+  } 
+  
    return (
     <Fragment>
       <div className="container-waiter vh-100">
         <Header />
-        <BtnMenu data = {setDataState} />
-        </div>
+        <BtnMenu setMenu={setMenu} />
+        <div>
         {
-                dataState.map((item,index)=>(
-                    <div key={item.id}>
-                      <div >{item.type}</div>
-                    </div>       
-                ))
-            }
+          dataState
+          /* .filter((products)=>products.type === menu) */
+          .map((product,id)=>(
+            <p key={product.id} />
+            ))
+
+        }
+    </div>    
+       
+      
+         
+        </div>
+      
+        
     </Fragment>
   );
 };
