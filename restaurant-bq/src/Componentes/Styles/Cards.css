@@ -1,19 +1,21 @@
-.container-breakfast-menu{
-    width: 100%;
-}
-
-.card {
+.card-container {
     border-radius: 20px;
     font-size: 25px;
     font-weight: bold;
+    margin-left: 5%;
+    width: 40%;
+    height: 40%;
 }
 
-.btn {
+.btn-cards {
     border-radius: 15px;
     font-size: 20px;
     font-weight: bold;
 }
 
+.img-cards{
+    width: 30%;
+}
 
 
 
