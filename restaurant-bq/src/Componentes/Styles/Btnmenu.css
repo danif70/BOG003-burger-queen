@@ -2,8 +2,9 @@
   display: flex;
   /* border: 5px solid rgb(0, 255, 98); */
   width: 50%;
-  justify-content: space-evenly;
-  margin-left: 2%;
+  justify-content: space-evenly; 
+  margin-right: 45%;
+
 }
 .btn-menu {
   width: 40%;
