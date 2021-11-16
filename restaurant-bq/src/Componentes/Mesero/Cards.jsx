@@ -3,11 +3,7 @@ import '../Styles/Cards.css';
 
 const Cards = ({ dataProduct , setOrder, order} ) => {
 
- /* const clientProduct = () => {
-    setProduct = [dataProduct.name, dataProduct.price]
-    console.log('desde Cards',setProduct)
-  }    */ 
-  //console.log('desde Cards',setProduct)
+ 
   return (
     <div
       className='card-container text-center col-sm-2 card bg-light mb-3'
