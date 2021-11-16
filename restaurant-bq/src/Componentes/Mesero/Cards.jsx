@@ -12,7 +12,7 @@ const Cards = ({ dataProduct }) => {
         {/* <h5 className='card-title'>{dataProduct.name}</h5> */}
         <p className='card-text'>{dataProduct.price}</p>
       <img className='img-cards' src={dataProduct.image}></img> 
-        <button className='btn-cards btn-warning w-50 ' type='submit'>
+        <button className='btn-cards btn-warning w-50 ' type='submit' >
           AGREGAR
         </button>
       </div>
