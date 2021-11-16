@@ -1,13 +1,32 @@
 .container-waiter{
   background-color: #323030;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
  
 }
 .container-menu {
   /* border: 5px solid red; */
   background-color: rgba(238, 238, 238, 0.15);
-  height: 700px;
+  height: 650px;
   margin-top: 40px;
   border-radius: 20px;
-  margin-left: 2%;
-  width:50%;
+  /* margin-left: 2%; */
+  width:53%;
+  box-shadow: 2px 2px 2px 2px rgb(31, 28, 28);
+}
+
+.container-order{
+  
+  background-color: rgba(238, 238, 238, 0.15);
+  height: 650px;
+  border-radius: 20px;
+  width:37%;
+  margin-top: 40px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px 2px rgb(31, 28, 28);
 }

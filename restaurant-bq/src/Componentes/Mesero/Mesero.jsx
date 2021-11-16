@@ -2,11 +2,15 @@ import React, { useState, useEffect, Fragment } from "react";
 import { Header } from "../Header/Header";
 import { BtnMenu } from "./Btnmenu";
 import { Cards } from "./Cards";
+import { ResumenPedido} from "./ResumenPedido"
+//import { CardButton } from './CardButton';
 import "../Styles/Mesero.css";
 
 const Mesero = () => {
   const [dataState, setDataState] = useState([]);
   const [menu, setMenu] = useState("DESAYUNOS");
+  const [order, setOrder] = useState([]);
+  
 
   useEffect(() => {
     getProduct();
@@ -19,6 +23,12 @@ const Mesero = () => {
     //dataState empieza con un arr vacio y en la linea 18 cambia su estado a la data traida con fetch con la funcion setDataState
   };
 
+  /* const clientProduct = () => {
+    setProduct = [dataState.name, dataState.price]
+    console.log('desde Mesero',setProduct)
+  }  */
+
+  
   return (
     <Fragment>
       <div className="container-waiter vh-100 ">
@@ -29,11 +39,13 @@ const Mesero = () => {
           {dataState
             .filter((products) => products.type === menu)
             .map((item) => (
-              <Cards key={item.id} dataProduct={item} />
+              <Cards key={item.id} dataProduct={item} setOrder={setOrder} order={order}/>
             ))}
         </div>
-      </div>
+        <div className="container-order">
+          <ResumenPedido order={order}/> 
+        </div>
+        </div>
     </Fragment>
-  );
-};
+  )}
 export { Mesero };
