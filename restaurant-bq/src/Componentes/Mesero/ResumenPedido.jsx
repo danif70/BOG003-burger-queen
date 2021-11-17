@@ -14,7 +14,7 @@ const ResumenPedido = ({ order, onAdd, onRemove }) => {
   return (
     <Fragment>
       <div>
-        <h2>Cliente</h2> 
+        <h2>Cliente</h2>
         <input type="text" />
         <ul>
           <li>ITEM</li>
@@ -35,8 +35,10 @@ const ResumenPedido = ({ order, onAdd, onRemove }) => {
             </div>
           </div>
         ))}
-        <div>TOTAL $ {totalPrice}
-        {console.log(totalPrice)}</div>
+        <div>
+          TOTAL $ {totalPrice}
+          {console.log(totalPrice)}
+        </div>
       </div>
       {/* {console.log('desde ResumenPedido', order)} */}
     </Fragment>

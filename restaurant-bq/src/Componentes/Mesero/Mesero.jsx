@@ -10,7 +10,7 @@ const Mesero = () => {
   const [dataState, setDataState] = useState([]);
   const [menu, setMenu] = useState("DESAYUNOS");
   const [order, setOrder] = useState([]);
-  
+  // const [subMenu, setSubMenu] = useState("Burger");
 
   useEffect(() => {
     getProduct();
@@ -32,7 +32,7 @@ const Mesero = () => {
           el.id === product.id ? { ...exist, qty: exist.qty + 1 } : el
         )
       );
-      console.log( exist)
+      console.log(exist);
     } else {
       setOrder([...order, { ...product, qty: 1 }]);
     }
@@ -43,7 +43,6 @@ const Mesero = () => {
     const exist = order.find((el) => el.id === product.id);
     if (exist.qty === 1) {
       setOrder(order.filter((el) => el.id !== product.id));
-      
     } else {
       setOrder(
         order.map((el) =>
@@ -69,6 +68,8 @@ const Mesero = () => {
                 setOrder={setOrder}
                 order={order}
                 onAdd={onAdd}
+                // subMenu={subMenu}
+                // setSubMenu={dataState}
               />
             ))}
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Cards.css";
+import { ModalBurger } from "./ModalBurger";
 
 const Cards = ({ dataProduct, onAdd }) => {
   // setOrder, order,
@@ -7,7 +8,8 @@ const Cards = ({ dataProduct, onAdd }) => {
   //   setOrder([...order, dataProduct])
   //   console.log(order)
   //  }
-  return (
+  
+  return(
     <div
       className="card-container text-center col-sm-2 card bg-light mb-3"
       key={dataProduct.id}
@@ -17,21 +19,33 @@ const Cards = ({ dataProduct, onAdd }) => {
         <p className="card-text">$ {dataProduct.price}</p>
         <img className="img-cards" src={dataProduct.image}></img>
         <div>
-          <button
-            onClick={() => onAdd(dataProduct)}
-            //    () => {
-            //  setOrder([...order, dataProduct]);
-            //  console.log([...order, dataProduct]);
-            //  }}
-            className="btn-cards btn-warning w-50 "
-            type="submit"
-          >
-            AGREGAR
-          </button>
+          { dataProduct.submenu  === "Burger" ? (
+            <div>
+              <button
+
+              >
+                OPCIONES
+                {/* <ModalBurger /> */}
+              </button>
+            </div>
+          ) : (
+            <div>
+              <button
+                onClick={() => onAdd(dataProduct)}
+                className="btn-cards btn-warning w-50 "
+                type="submit"
+              >
+                AGREGAR
+              </button>
+            </div>
+          )}
+
+          {/* <ModalBurger /> */}
         </div>
       </div>
     </div>
   );
+
 };
 
 export { Cards };
