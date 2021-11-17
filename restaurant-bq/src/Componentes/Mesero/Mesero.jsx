@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from "react";
 import { Header } from "../Header/Header";
 import { BtnMenu } from "./Btnmenu";
 import { Cards } from "./Cards";
-import { ResumenPedido} from "./ResumenPedido"
+import { ResumenPedido } from "./ResumenPedido";
 //import { CardButton } from './CardButton';
 import "../Styles/Mesero.css";
 
@@ -18,17 +18,41 @@ const Mesero = () => {
 
   const getProduct = () => {
     fetch("data.json")
-      .then((product) => product.json())
+      .then((products) => products.json())
       .then((data) => setDataState(data));
     //dataState empieza con un arr vacio y en la linea 18 cambia su estado a la data traida con fetch con la funcion setDataState
   };
 
-  /* const clientProduct = () => {
-    setProduct = [dataState.name, dataState.price]
-    console.log('desde Mesero',setProduct)
-  }  */
+  const onAdd = (product) => {
+    //exist busca que el producto exista en el resumen y para eso trata de encontrar que el id del articulo sea igual al id de product
+    const exist = order.find((el) => el.id === product.id);
+    if (exist) {
+      setOrder(
+        order.map((el) =>
+          el.id === product.id ? { ...exist, qty: exist.qty + 1 } : el
+        )
+      );
+      console.log( exist)
+    } else {
+      setOrder([...order, { ...product, qty: 1 }]);
+    }
+  };
 
-  
+  const onRemove = (product) => {
+    //exist busca que el producto exista en el resumen y para eso trata de encontrar que el id del articulo sea igual al id de product
+    const exist = order.find((el) => el.id === product.id);
+    if (exist.qty === 1) {
+      setOrder(order.filter((el) => el.id !== product.id));
+      
+    } else {
+      setOrder(
+        order.map((el) =>
+          el.id === product.id ? { ...exist, qty: exist.qty - 1 } : el
+        )
+      );
+    }
+  };
+
   return (
     <Fragment>
       <div className="container-waiter vh-100 ">
@@ -39,13 +63,20 @@ const Mesero = () => {
           {dataState
             .filter((products) => products.type === menu)
             .map((item) => (
-              <Cards key={item.id} dataProduct={item} setOrder={setOrder} order={order}/>
+              <Cards
+                key={item.id}
+                dataProduct={item}
+                setOrder={setOrder}
+                order={order}
+                onAdd={onAdd}
+              />
             ))}
         </div>
         <div className="container-order">
-          <ResumenPedido order={order}/> 
+          <ResumenPedido onAdd={onAdd} onRemove={onRemove} order={order} />
         </div>
-        </div>
+      </div>
     </Fragment>
-  )}
+  );
+};
 export { Mesero };

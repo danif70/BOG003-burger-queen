@@ -3,35 +3,35 @@
     "id": "1",
     "name": "Café Americano",
     "type": "DESAYUNOS",
-    "price": "$5",
+    "price": "5",
     "image": "./ProductsImg/id1.png"
   },
   {
     "id": "2",
     "name": "Café con Leche",
     "type": "DESAYUNOS",
-    "price": "$7",
+    "price": "7",
     "image": "./ProductsImg/id2.png"
   },
   {
     "id": "3",
     "name": "Sandwich de Jamón y Queso",
     "type": "DESAYUNOS",
-    "price": "$10",
+    "price": "10",
     "image": "./ProductsImg/id3.png"
   },
   {
     "id": "4",
     "name": "Jugo de Frutas natural",
     "type": "DESAYUNOS",
-    "price": "$7",
+    "price": "7",
     "image": "./ProductsImg/id4.png"
   },
   {
     "id": "5",
     "name": "Hamburguesa Simple",
     "type": "COMIDAS",
-    "price": "$10",
+    "price": "10",
     "image": "./ProductsImg/id5.png",
     "protein": {
       "beef": "Res",
@@ -39,15 +39,15 @@
       "veggie": "Vegetariana"
     },
     "extras": {
-      "huevo": "$1",
-      "queso": "$1"
+      "huevo": "1",
+      "queso": "1"
     }
   },
   {
     "id": "6",
     "name": "Hamburguesa Doble",
     "type": "COMIDAS",
-    "price": "$15",
+    "price": "15",
     "image":"./ProductsImg/id5.png",
     "protein": {
       "beef": "Res",
@@ -55,50 +55,50 @@
       "veggie": "Vegetariana"
     },
     "extras": {
-      "huevo": "$1",
-      "queso": "$1"
+      "huevo": "1",
+      "queso": "1"
     }
   },
   {
     "id": "7",
     "name": "Papas Fritas",
     "type": "COMIDAS",
-    "price": "$5",
+    "price": "5",
     "image": "./ProductsImg/id7.png"
   },
   {
     "id": "8",
     "name": "Aros de Cebolla",
     "type": "COMIDAS",
-    "price": "$5",
+    "price": "5",
     "image": "./ProductsImg/id8.png"
   },
   {
     "id": "9",
     "name": "Agua 500ml",
     "type": "COMIDAS",
-    "price": "$5",
+    "price": "5",
     "image": "./ProductsImg/id9.png"
   },
   {
     "id": "10",
     "name": "Agua 750ml",
     "type": "COMIDAS",
-    "price": "$7",
+    "price": "7",
     "image":"./ProductsImg/id9.png"
   },
   {
     "id": "11",
     "name": "Gaseosa 500ml",
     "type": "COMIDAS",
-    "price": "$7",
+    "price": "7",
     "image": "./ProductsImg/id11.png"
   },
   {
     "id": "12",
     "name": "Gaseosa 750ml",
     "type": "COMIDAS",
-    "price": "$10",
+    "price": "10",
     "image": "./ProductsImg/id11.png"
   }
 ]
