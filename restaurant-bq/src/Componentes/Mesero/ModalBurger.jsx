@@ -1,19 +1,33 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "../Styles/ModalBurger.css"
 
 
-const ModalBurger = ({modal, dataModal}) => {
-console.log(dataModal);
+const ModalBurger = ({ showModal, dataModal }) => {
+  const [proteinType, setProteinType] = useState('')
+  const TypeExtra = Object.keys(dataModal.extras)
 
+  console.log('data de modal', dataModal)
   return (
     <Fragment>
-      {modal ? (
-      <div  className="container-modal" >
+      {showModal ? (<div className="container-modal" >
         <p>{dataModal.name}</p>
-        {dataModal.protein.map(item => (item))}
-        <p>EXTRAS</p>
-      </div>) : (null)}
-      
+        {dataModal.protein.map((item) => (
+          <label key={item}>
+            <input
+              type='radio'
+              value={item}
+              name='protein'
+              onChange={() => setProteinType(item)}
+            />
+            {console.log('la proteina escogida', dataModal.name, proteinType)}
+            {item}
+          </label>))}
+
+        {TypeExtra}
+      </div>) : (null)
+      }
+      {console.log(TypeExtra)}
+
     </Fragment>
   );
 };

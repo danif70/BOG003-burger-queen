@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "../Styles/Cards.css";
 import { ModalBurger } from "./ModalBurger";
 
 const Cards = ({ dataProduct, onAdd }) => {
+  const [showModal, setShowModal] = useState(false)
+  
+
   // setOrder, order,
   //  const handleOrder = () => {
   //   setOrder([...order, dataProduct])
@@ -22,12 +25,10 @@ const Cards = ({ dataProduct, onAdd }) => {
         <div>
           {dataProduct.submenu === "Burger" ? (
             <div>
-              
-              <button onClick={() => setModal(true) }className="btn-cards btn-warning w-50 " type="submit">
+              <button onClick={()=> setShowModal(true)}>
                 OPCIONES
               </button>
-              <ModalBurger modal={modal} dataModal={dataProduct}/> 
-              
+                <ModalBurger showModal={showModal} dataModal={dataProduct} />
             </div>
           ) : (
             <div>
@@ -35,8 +36,6 @@ const Cards = ({ dataProduct, onAdd }) => {
               className="btn-cards btn-warning w-50 " type="submit">AGREGAR</button>
             </div>
           )}
-
-          {/* <ModalBurger /> */}
         </div>
       </div>
     </div>
