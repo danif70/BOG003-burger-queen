@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Cards.css";
 import { ModalBurger } from "./ModalBurger";
 
@@ -8,8 +8,9 @@ const Cards = ({ dataProduct, onAdd }) => {
   //   setOrder([...order, dataProduct])
   //   console.log(order)
   //  }
-  
-  return(
+  const [modal, setModal] = useState(false);
+
+  return (
     <div
       className="card-container text-center col-sm-2 card bg-light mb-3"
       key={dataProduct.id}
@@ -19,24 +20,19 @@ const Cards = ({ dataProduct, onAdd }) => {
         <p className="card-text">$ {dataProduct.price}</p>
         <img className="img-cards" src={dataProduct.image}></img>
         <div>
-          { dataProduct.submenu  === "Burger" ? (
+          {dataProduct.submenu === "Burger" ? (
             <div>
-              <button
-
-              >
+              
+              <button onClick={() => setModal(true) }className="btn-cards btn-warning w-50 " type="submit">
                 OPCIONES
-                {/* <ModalBurger /> */}
               </button>
+              <ModalBurger modal={modal} dataModal={dataProduct}/> 
+              
             </div>
           ) : (
             <div>
-              <button
-                onClick={() => onAdd(dataProduct)}
-                className="btn-cards btn-warning w-50 "
-                type="submit"
-              >
-                AGREGAR
-              </button>
+              <button onClick={() => onAdd(dataProduct)}
+              className="btn-cards btn-warning w-50 " type="submit">AGREGAR</button>
             </div>
           )}
 
@@ -45,7 +41,6 @@ const Cards = ({ dataProduct, onAdd }) => {
       </div>
     </div>
   );
-
 };
 
 export { Cards };

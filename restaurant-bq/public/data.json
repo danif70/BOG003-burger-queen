@@ -39,11 +39,11 @@
     "submenu":"Burger",
     "price": "10",
     "image": "./ProductsImg/id5.png",
-    "protein": {
-      "beef": "Res",
-      "chicken": "Pollo",
-      "veggie": "Vegetariana"
-    },
+    "protein": [
+       "Res",
+       "Pollo",
+       "Vegetariana"
+      ],
     "extras": {
       "huevo": "1",
       "queso": "1"
@@ -56,11 +56,11 @@
     "submenu":"Burger",
     "price": "15",
     "image":"./ProductsImg/id5.png",
-    "protein": {
-      "beef": "Res",
-      "chicken": "Pollo",
-      "veggie": "Vegetariana"
-    },
+    "protein": [
+      "Res",
+      "Pollo",
+      "Vegetariana"
+     ],
     "extras": {
       "huevo": "1",
       "queso": "1"

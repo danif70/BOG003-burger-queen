@@ -2,14 +2,18 @@ import React, { Fragment } from "react";
 import "../Styles/ModalBurger.css"
 
 
-const ModalBurger = () => {
+const ModalBurger = ({modal, dataModal}) => {
+console.log(dataModal);
+
   return (
     <Fragment>
-      <div className="container-modal" >
-        <p>HAMBURGUESA X</p>
-        <p>PROTEINA</p>
+      {modal ? (
+      <div  className="container-modal" >
+        <p>{dataModal.name}</p>
+        {dataModal.protein.map(item => (item))}
         <p>EXTRAS</p>
-      </div>
+      </div>) : (null)}
+      
     </Fragment>
   );
 };
