@@ -24,7 +24,8 @@ const Cards = ({ dataProduct, onAdd }) => {
         <div>
           { dataProduct.submenu  === "Burger" ? (
             <div>
-              <button onClick={()=> setShowModal(true)}>
+              <button onClick={()=> setShowModal(true)}  className="btn-cards btn-warning w-50 "
+                type="submit">
                 OPCIONES
               </button>
                 <ModalBurger showModal={showModal} dataModal={dataProduct} />
