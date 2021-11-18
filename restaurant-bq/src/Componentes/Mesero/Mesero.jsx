@@ -10,7 +10,7 @@ const Mesero = () => {
   const [dataState, setDataState] = useState([]);
   const [menu, setMenu] = useState("DESAYUNOS");
   const [order, setOrder] = useState([]);
-  // const [subMenu, setSubMenu] = useState("Burger");
+    // const [subMenu, setSubMenu] = useState("Burger");
 
   useEffect(() => {
     getProduct();

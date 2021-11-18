@@ -5,7 +5,7 @@ import { Historial } from "./Componentes/Historial/Historial";
 import { Cocina } from "./Componentes/Cocina/Cocina";
 import { Opciones } from "./Componentes/Opciones/Opciones";
 import { Home } from "./Componentes/Home/Home";
-import { Errors } from "./Componentes/Error/Error.jsx"
+import { Error } from "./Componentes/Error/Error.jsx"
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/cocina" component={Cocina} />
           <Route path="/opciones" component={Opciones} />
           <Route path="/" exact component={Home} />
-          <Route component={Errors} />
+          <Route component={Error} />
         </Switch>
       </div>
     </Router> 
