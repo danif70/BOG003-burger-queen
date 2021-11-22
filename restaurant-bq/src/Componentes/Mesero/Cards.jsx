@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Styles/Cards.css";
 import { ModalBurger } from "./ModalBurger";
 
-const Cards = ({ dataProduct, onAdd }) => {
+const Cards = ({ dataProduct, onAdd}) => {
   const [showModal, setShowModal] = useState(false);
   
   // setOrder, order,
@@ -35,6 +35,7 @@ const Cards = ({ dataProduct, onAdd }) => {
               dataModal={dataProduct} 
               onAdd={ onAdd}
               order={onAdd}
+              setShowModal={setShowModal}
               />
             </div>
           ) : (
