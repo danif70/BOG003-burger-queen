@@ -6,28 +6,19 @@ const ResumenPedido = ({ order, onAdd, onRemove, onRemoveAll }) => {
     (price, items) => price + items.qty * items.price,
     0
   );
-<<<<<<< HEAD
-  
-=======
 
   const [count, setCount] = useState(1);
   const [client, setClient] = useState("");
 
->>>>>>> d86faae8be3aab381fd3c71e054db6243c33983f
   return (
     <Fragment>
       <div>
         <h2>Cliente</h2>
-<<<<<<< HEAD
-        <input type="text" />
-        {order.length === 0 && <div>ORDEN VACÍA</div>}
-=======
         <input type="text" client={client} onChange={(e) => {console.log(e.target.value)}}/>
         <p> Numero de Pedido: {count}</p>
 
         {order.length === 0 && <div>ORDEN VACÍA</div>} 
         {/* renderizado condicional && = entonces */}
->>>>>>> d86faae8be3aab381fd3c71e054db6243c33983f
       </div>
 
       <div className="container-order2 overflow-auto row row-cols-1 row-cols-md-2 g-4  overflow-auto">
@@ -39,13 +30,8 @@ const ResumenPedido = ({ order, onAdd, onRemove, onRemoveAll }) => {
              <button onClick={() => onRemoveAll(item)}>Eliminar todo</button> 
 
             <div>
-<<<<<<< HEAD
-              {item.qty} $ {item.price*item.qty}
-              {console.log(item.qty, parseInt(item.price))} 
-=======
               {item.qty} $ {item.price* item.qty}
               {/* {console.log(item.qty, parseInt(item.price))}  */}
->>>>>>> d86faae8be3aab381fd3c71e054db6243c33983f
             </div>
           </div>
         ))}
