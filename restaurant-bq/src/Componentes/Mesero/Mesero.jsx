@@ -32,7 +32,7 @@ const Mesero = () => {
           el.id === product.id ? { ...exist, qty: exist.qty + 1 } : el
         )
       );
-      console.log(exist);
+      //console.log(exist);
     } else {
       setOrder([...order, { ...product, qty: 1 }]);
     }
