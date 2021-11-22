@@ -7,17 +7,12 @@ const ResumenPedido = ({ order, onAdd, onRemove }) => {
     0
   );
   
-console.log('soy ',  order);
   return (
     <Fragment>
       <div>
         <h2>Cliente</h2>
         <input type="text" />
-        <ul>
-          <li>ITEM</li>
-          <li>CANTIDAD</li>
-          <li>PRECIO</li>
-        </ul>
+        {order.length === 0 && <div>ORDEN VACÍA</div>}
       </div>
 
       <div className="container-order2 overflow-auto row row-cols-1 row-cols-md-2 g-4  overflow-auto">
@@ -27,7 +22,7 @@ console.log('soy ',  order);
             <button onClick={() => onAdd(item)}>+</button>
             <button onClick={() => onRemove(item)}>-</button>
             <div>
-              {item.qty} $ {item.price}
+              {item.qty} $ {item.price*item.qty}
               {console.log(item.qty, parseInt(item.price))} 
             </div>
           </div>
@@ -36,7 +31,7 @@ console.log('soy ',  order);
           TOTAL $ {totalPrice}
         </div>
       </div>
-      {/* {console.log('desde ResumenPedido', order)} */}
+       {console.log('desde ResumenPedido', order)}
     </Fragment>
   );
 };

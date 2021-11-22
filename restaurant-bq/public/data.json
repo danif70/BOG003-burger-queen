@@ -45,8 +45,8 @@
       "Vegetariana"
     ],
     "extras": {
-      "Huevo": "1",
-      "Queso": "2"
+      "HUEVO": "1",
+      "QUESO": "2"
     }
   },
   {
@@ -62,8 +62,8 @@
       "Vegetariana"
     ],
     "extras": {
-      "Huevo": "1",
-      "Queso": "2"
+      "HUEVO": "1",
+      "QUESO": "2"
     }
   },
   {
