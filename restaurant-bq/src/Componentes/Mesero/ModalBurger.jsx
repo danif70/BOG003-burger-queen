@@ -33,7 +33,7 @@ const ModalBurger = ({ showModal, dataModal, onAdd, setShowModal }) => {
             className="btn-exit-modal"
             onClick={() => {
               setShowModal(false);
-               handleReset()
+              handleReset()
             }}
           >
             X
