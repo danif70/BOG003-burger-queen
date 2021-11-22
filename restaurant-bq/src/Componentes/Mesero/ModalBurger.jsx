@@ -10,8 +10,6 @@ const ModalBurger = ({ showModal, dataModal, onAdd}) => {
   //   (price, items) => price + items.qty * items.price,
   //   0
   // );
- 
-
   const TypeExtra = Object.keys(dataModal.extras) // huevo y queso
   const PriceExtra = Object.values(dataModal.extras) //precio de huevo y queso
   console.log(PriceExtra);
