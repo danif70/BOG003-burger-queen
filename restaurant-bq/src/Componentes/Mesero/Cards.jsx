@@ -26,12 +26,13 @@ const Cards = ({ dataProduct, onAdd}) => {
               <button
                 onClick={() => setShowModal(true)}
                 className="btn-cards btn-warning w-50 "
-                type="submit"
+                type="button"
               >
                 OPCIONES
               </button>
               <ModalBurger 
-              showModal={showModal} 
+              showModal={showModal}
+              setShowModal={setShowModal} 
               dataModal={dataProduct} 
               onAdd={ onAdd}
               order={onAdd}
@@ -56,5 +57,3 @@ const Cards = ({ dataProduct, onAdd}) => {
 };
 
 export { Cards };
-// option={option}
-// setOption={setOption}

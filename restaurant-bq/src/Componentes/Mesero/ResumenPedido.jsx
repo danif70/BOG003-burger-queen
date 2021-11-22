@@ -10,11 +10,22 @@ const ResumenPedido = ({ order, onAdd, onRemove, onRemoveAll }) => {
   const [count, setCount] = useState(1);
   const [client, setClient] = useState("");
 
+  const orderMap = order.map((item)=> item.qty)
+  const orderPriceMap = order.map((item)=> parseInt(item.price))
+  const objOrder = {
+    client: client,
+    numOrder: count,
+    item: order,
+    qty: orderMap,
+    itemPrice: orderPriceMap,
+    totalPrice: totalPrice
+  }
+
   return (
     <Fragment>
       <div>
         <h2>Cliente</h2>
-        <input type="text" client={client} onChange={(e) => {console.log(e.target.value)}}/>
+        <input type="text" client={client} onChange={(e) => setClient(e.target.value)}/>
         <p> Numero de Pedido: {count}</p>
 
         {order.length === 0 && <div>ORDEN VACÍA</div>} 
@@ -41,10 +52,15 @@ const ResumenPedido = ({ order, onAdd, onRemove, onRemoveAll }) => {
         <div>
         <button type="submit" 
         className="btn-cards btn-warning w-50 "
-        onClick={() => setCount(count+1)}>ENVIAR PEDIDO</button>
+        onClick={() =>{ setCount(count+1)
+          /* onRemoveAll(order) */
+          console.log(objOrder)
+        }}
+        >
+          ENVIAR PEDIDO</button>
         </div>
       </div>
-      {/* {console.log('desde ResumenPedido', order)} */}
+      
     </Fragment>
   );
 };
