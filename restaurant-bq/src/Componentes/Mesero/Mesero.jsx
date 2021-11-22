@@ -52,6 +52,16 @@ const Mesero = () => {
     }
   };
 
+ const onRemoveAll = (products) => {
+  const exist = order.find((el) => el.id === products.id);
+    if (exist.qty !== 0) {
+      setOrder(order.filter((el) => el.id !== products.id));
+    }
+
+ }
+
+  
+
   return (
     <Fragment>
       <div className="container-waiter vh-100 ">
@@ -68,13 +78,15 @@ const Mesero = () => {
                 setOrder={setOrder}
                 order={order}
                 onAdd={onAdd}
+                
+              
                 // subMenu={subMenu}
                 // setSubMenu={dataState}
               />
             ))}
         </div>
         <div className="container-order">
-          <ResumenPedido onAdd={onAdd} onRemove={onRemove} order={order} />
+          <ResumenPedido onAdd={onAdd} onRemove={onRemove} order={order} onRemoveAll={onRemoveAll}/>
         </div>
       </div>
     </Fragment>
