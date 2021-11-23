@@ -57,7 +57,7 @@ const ModalBurger = ({ showModal, dataModal, onAdd, setShowModal }) => {
           {TypeExtra.map((item, index) => (
             <label key={item}>
               <input
-                type="checkbox"
+                type="checkbox" 
                 value={item[index]}
                 name={item}
                 onChange={(e) => {
@@ -67,8 +67,7 @@ const ModalBurger = ({ showModal, dataModal, onAdd, setShowModal }) => {
                     parseInt(PriceExtra[index]),
                   ]);
 
-                  // console.log([...addExtra, e.target.name]); console.log([...addPriceExtra, parseInt(e.target.value)])
-                  //onRemove([e.target.name, e.target.value])
+                  
                 }}
               />
               {/* {e.target.reset()} */}
