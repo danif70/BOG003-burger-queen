@@ -57,6 +57,7 @@ const ModalBurger = ({ showModal, dataModal, onAdd, setShowModal }) => {
           {TypeExtra.map((item, index) => (
             <label key={item}>
               <input
+              className="form-check-input"
                 type="checkbox" 
                 value={item[index]}
                 name={item}

@@ -24,27 +24,46 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
   
   return (
     <Fragment>
-      <div>
-        <h2>Cliente</h2>
-      
-        <input value={client} type="text"  onChange={(e) => {setClient(e.target.value)}}/>
+      <div className="header-pedido">
+        <div className = "section-cliente"> 
+        <label htmlFor = "cliente"> Cliente:  </label>
+        <input className = "input-cliente" value={client} type="text" id = "cliente" onChange={(e) => {setClient(e.target.value)}}/>
+        </div>
+        <div className = "contador-pedido">
+        <p> # Pedido </p>
+        <p className = "contador">{count}</p>
+        </div>
         
-        <p> Numero de Pedido: {count}</p>
+        
+      </div>     
+      
+                    
+      <div className="body-pedido">
+        <div className= "title-body-pedido">
+          <p>ITEM</p>
+          <p>CANT</p>
+          <p>P.UNIT</p>
+          <p>P.TOTAL</p>
+          
+        </div>
+        <div>{order.length === 0 && <div>ORDEN VACÍA</div>} 
+        {/* renderizado condicional && = entonces */}</div>
 
-        {order.length === 0 && <div>ORDEN VACÍA</div>} 
-        {/* renderizado condicional && = entonces */}
-      </div>
-
-      <div className="container-order2 overflow-auto row row-cols-1 row-cols-md-2 g-4  overflow-auto">
         {order.map((item) => (
           <div key={item.name}>
-            <p>{item.name}</p>
-            <button onClick={() => onAdd(item)}>+</button>
-            <button onClick={() => onRemove(item)}>-</button>
-            <button onClick={() => onRemoveAll(item)}>Eliminar todo</button> 
-            <div>
-              {item.qty} $ {item.price* item.qty}
+            <div className= "items-body-pedido">
+            <p className = "item-body-name" >{item.name}</p>
+            <button className = "btn-OnRA" onClick={() => onRemove(item)}>-</button>
+            <p> {item.qty} </p>
+            <button className = "btn-OnRA" onClick={() => onAdd(item)}>+</button>  
+            <p> $ {item.price} </p>  
+            <p>  $ {item.price* item.qty} </p>        
+            <button onClick={() => onRemoveAll(item)}>Etodo</button> 
             </div>
+            
+                       
+             
+           
           </div>
         ))}
         <div>
