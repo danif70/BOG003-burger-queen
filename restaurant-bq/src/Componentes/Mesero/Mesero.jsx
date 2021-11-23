@@ -86,7 +86,7 @@ const Mesero = () => {
             ))}
         </div>
         <div className="container-order">
-          <ResumenPedido onAdd={onAdd} onRemove={onRemove} order={order} onRemoveAll={onRemoveAll}/>
+          <ResumenPedido onAdd={onAdd} onRemove={onRemove} order={order} setOrder={setOrder} onRemoveAll={onRemoveAll}/>
         </div>
       </div>
     </Fragment>
