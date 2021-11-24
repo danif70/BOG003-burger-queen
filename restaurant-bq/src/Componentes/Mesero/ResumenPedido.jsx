@@ -1,5 +1,8 @@
 import React, { Fragment, useState } from "react";
 import "../Styles/ResumenPedido.css";
+import Add from '../Imagenes/add.png'
+import Minus from '../Imagenes/minus.png'
+import Delete from '../Imagenes/delete.png'
 
 const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
   const totalPrice = order.reduce(
@@ -59,19 +62,15 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
           <div key={item.name}>
             <div className="items-body-pedido" >
               <p className="item-body-name">{item.name}</p>
-              <button className="btn-OnRA" onClick={() => onRemove(item)}>
-                {" "}
-                -
-              </button>
-
-              <p> {item.qty} </p>
-              <button className="btn-OnRA" onClick={() => onAdd(item)}>
-                {" "}
-                +
-              </button>
-              <p> $ {item.price} </p>
-              <button className="btn-OnRA" onClick={() => onRemoveAll(item)}>X</button>
-              <p> $ {item.price * item.qty} </p>
+              
+               <img type="button" className="btn-OnRA" src={Minus} onClick={() => onRemove(item)}></img> 
+    
+              <p className="item-data"> {item.qty} </p>
+              <img type="button" className="btn-OnRA" src={Add} onClick={() => onAdd(item)}></img> 
+              <p className="item-data"> $ {item.price} </p>
+              {/* <button className="btn-OnRA" onClick={() => onRemoveAll(item)}>X</button> */}
+              <img type="button" className="btn-OnRA" src={Delete} onClick={() => onRemoveAll(item)}></img> 
+              <p className="item-data"> $ {item.price * item.qty} </p>
             </div>
           </div>
         ))}

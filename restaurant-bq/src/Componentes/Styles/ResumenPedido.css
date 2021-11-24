@@ -66,15 +66,15 @@
 }
 .btn-OnRA {
   display: flex;
-  align-items: center;
+  align-items:baseline;
   text-align: center;
-  color: #ffe145;
-  font-size: 30px;
-  font-weight: bolder;
   align-items: center;
-  background-color: rgba(238, 238, 238, 0.15);
-  width: 30px;
-  height: 30px;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+}
+.item-data {
+  margin-bottom: 0;
 }
 .enviar {
   display: flex;
@@ -87,6 +87,7 @@
   font-size: 30px;
   font-weight: 700;
   margin-right: 20px;
+
 
 }
 .no-order {
