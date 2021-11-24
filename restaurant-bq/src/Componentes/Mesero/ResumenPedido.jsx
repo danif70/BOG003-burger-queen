@@ -8,10 +8,10 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
   );
 
   const [count, setCount] = useState(1);
-  const [client, setClient] = useState('');
+  const [client, setClient] = useState("");
 
-  const orderMap = order.map((item)=> item.qty)
-  const orderPriceMap = order.map((item)=> parseInt(item.price))
+  const orderMap = order.map((item) => item.qty);
+  const orderPriceMap = order.map((item) => parseInt(item.price));
 
   const objOrder = {
     client: client,
@@ -19,70 +19,78 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
     item: order,
     qty: orderMap,
     itemPrice: orderPriceMap,
-    totalPrice: totalPrice
-  }
-  
+    totalPrice: totalPrice,
+  };
+
   return (
     <Fragment>
       <div className="header-pedido">
-        <div className = "section-cliente"> 
-        <label htmlFor = "cliente"> Cliente:  </label>
-        <input className = "input-cliente" value={client} type="text" id = "cliente" onChange={(e) => {setClient(e.target.value)}}/>
+        <div className="section-cliente">
+          <label htmlFor="cliente"> Cliente: </label>
+          <input
+            className="input-cliente"
+            value={client}
+            type="text"
+            id="cliente"
+            onChange={(e) => {
+              setClient(e.target.value);
+            }}
+          />
         </div>
-        <div className = "contador-pedido">
-        <p> # Pedido </p>
-        <p className = "contador">{count}</p>
+        <div className="contador-pedido">
+          <p> # Pedido </p>
+          <p className="contador">{count}</p>
         </div>
-        
-        
-      </div>     
-      
-                    
+      </div>
+
       <div className="body-pedido">
-        <div className= "title-body-pedido">
+        <div className="title-body-pedido">
           <p>ITEM</p>
           <p>CANT</p>
           <p>P.UNIT</p>
           <p>P.TOTAL</p>
-          
         </div>
-        <div>{order.length === 0 && <div>ORDEN VACÍA</div>} 
-        {/* renderizado condicional && = entonces */}</div>
+        <div>
+          {order.length === 0 && <div className="no-order">ORDEN VACÍA</div>}
+          {/* renderizado condicional && = entonces */}
+        </div>
 
         {order.map((item) => (
           <div key={item.name}>
-            <div className= "items-body-pedido">
-            <p className = "item-body-name" >{item.name}</p>
-            <button className = "btn-OnRA" onClick={() => onRemove(item)}>-</button>
-            <p> {item.qty} </p>
-            <button className = "btn-OnRA" onClick={() => onAdd(item)}>+</button>  
-            <p> $ {item.price} </p>  
-            <p>  $ {item.price* item.qty} </p>        
-            <button onClick={() => onRemoveAll(item)}>Etodo</button> 
+            <div className="items-body-pedido" >
+              <p className="item-body-name">{item.name}</p>
+              <button className="btn-OnRA" onClick={() => onRemove(item)}>
+                {" "}
+                -
+              </button>
+
+              <p> {item.qty} </p>
+              <button className="btn-OnRA" onClick={() => onAdd(item)}>
+                {" "}
+                +
+              </button>
+              <p> $ {item.price} </p>
+              <button className="btn-OnRA" onClick={() => onRemoveAll(item)}>X</button>
+              <p> $ {item.price * item.qty} </p>
             </div>
-            
-                       
-             
-           
           </div>
         ))}
-        <div>
-          TOTAL $ {totalPrice}
-        </div>
-        <div>
-        <button type="submit" 
-        className="btn-cards btn-warning w-50 "
-        onClick={() =>{ 
-          setCount(count+1)
-          setOrder([])
-          setClient('')
-          console.log(objOrder)
-        }}
-        >
-          ENVIAR PEDIDO</button>
+        <div className="total-price">TOTAL $ {totalPrice}</div>
+        <div className="enviar">
+          <button
+            type="submit"
+            className="btn-cards btn-warning w-50"
+            onClick={() => {
+              setCount(count + 1);
+              setOrder([]);
+              setClient("");
+              console.log(objOrder);
+            }}
+          >
+            {order.length != 0 && <div>ENVIAR PEDIDO</div>}
+          </button>
         </div>
       </div>
-      
     </Fragment>
   );
 };
