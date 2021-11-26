@@ -3,6 +3,7 @@ import "../Styles/ResumenPedido.css";
 import Add from '../Imagenes/add.png'
 import Minus from '../Imagenes/minus.png'
 import Delete from '../Imagenes/delete.png'
+import {db} from '../../firebase.js'
 
 const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
   const totalPrice = order.reduce(
@@ -24,6 +25,12 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
     itemPrice: orderPriceMap,
     totalPrice: totalPrice,
   };
+
+  const addOrder = async () => {
+    await db.collection('order').add().set(objOrder);
+    //console.log(objOrder);
+  }
+ 
 
   return (
     <Fragment>
@@ -80,11 +87,10 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
             type="submit"
             className="btn-cards btn-warning w-50"
             onClick={() => {
-            
+              addOrder()
               setCount(count + 1);
               setOrder([]);
               setClient("");
-              console.log(objOrder);
             }}
           >
             {order.length != 0 && <div>ENVIAR PEDIDO</div>}
