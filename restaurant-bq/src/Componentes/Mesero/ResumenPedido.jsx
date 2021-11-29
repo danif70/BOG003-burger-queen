@@ -3,6 +3,7 @@ import "../Styles/ResumenPedido.css";
 import Add from '../Imagenes/add.png'
 import Minus from '../Imagenes/minus.png'
 import Delete from '../Imagenes/delete.png'
+import {db} from '../../firebase.js'
 
 const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
   const totalPrice = order.reduce(
@@ -25,6 +26,12 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
     totalPrice: totalPrice,
   };
 
+  const addOrder = async () => {
+    await db.collection('order').add().set(objOrder);
+    //console.log(objOrder);
+  }
+ 
+
   return (
     <Fragment>
       <div className="header-pedido">
@@ -33,9 +40,11 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
           <input
             className="input-cliente"
             value={client}
-            type="text"
+            type="text" required="required"
             id="cliente"
+            
             onChange={(e) => {
+              
               setClient(e.target.value);
             }}
           />
@@ -62,9 +71,7 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
           <div key={item.name}>
             <div className="items-body-pedido" >
               <p className="item-body-name">{item.name}</p>
-              
-               <img type="button" className="btn-OnRA" src={Minus} onClick={() => onRemove(item)}></img> 
-    
+              <img type="button" className="btn-OnRA" src={Minus} onClick={() => onRemove(item)}></img> 
               <p className="item-data"> {item.qty} </p>
               <img type="button" className="btn-OnRA" src={Add} onClick={() => onAdd(item)}></img> 
               <p className="item-data"> $ {item.price} </p>
@@ -80,10 +87,10 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
             type="submit"
             className="btn-cards btn-warning w-50"
             onClick={() => {
+              addOrder()
               setCount(count + 1);
               setOrder([]);
               setClient("");
-              console.log(objOrder);
             }}
           >
             {order.length != 0 && <div>ENVIAR PEDIDO</div>}

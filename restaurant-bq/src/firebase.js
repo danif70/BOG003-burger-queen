@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -10,9 +11,7 @@ const firebaseConfig = {
   projectId: "burger-queen-ecf81",
   storageBucket: "burger-queen-ecf81.appspot.com",
   messagingSenderId: "53553539515",
-  appId: "1:53553539515:web:ffc5d0f54b3a935622bc9e"
+  appId: "1:53553539515:web:ffc5d0f54b3a935622bc9e",
 };
-
-// Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
-export  default firebaseApp;  
+const app = initializeApp(firebaseConfig);
+export  const db = getFirestore(app);
