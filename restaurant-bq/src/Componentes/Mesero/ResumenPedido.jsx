@@ -26,10 +26,10 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
     totalPrice: totalPrice,
   };
 
-  const addOrder = async () => {
+ /* const addOrder = async () => {
     await db.collection('order').add().set(objOrder);
     //console.log(objOrder);
-  }
+  }*/
  
 
   return (
@@ -87,10 +87,11 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
             type="submit"
             className="btn-cards btn-warning w-50"
             onClick={() => {
-              addOrder()
+              //addOrder()
               setCount(count + 1);
               setOrder([]);
               setClient("");
+              console.log(objOrder);
             }}
           >
             {order.length != 0 && <div>ENVIAR PEDIDO</div>}
