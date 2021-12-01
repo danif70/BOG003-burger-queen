@@ -79,9 +79,6 @@ const Mesero = () => {
                 order={order}
                 onAdd={onAdd}
                 
-              
-                // subMenu={subMenu}
-                // setSubMenu={dataState}
               />
             ))}
         </div>
