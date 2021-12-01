@@ -15,9 +15,10 @@
     z-index: 1;
     position: absolute;
     border-radius: 20px;
-    width: 40%;
-    transform: translate(19%, 174%);
+    width: 45%;
+    transform: translate(12%, 160%);
     box-shadow: 2px 2px 2px 2px rgb(199, 199, 199);
+    padding-bottom: 2%; 
  }
  .modal-header{
     background-color:  #FFC107;
@@ -34,7 +35,17 @@
  }
  .container-protein {
     margin-top: 10px;
-    border: 2px solid red;
     justify-content: space-evenly;
     display: flex;
+    margin-top: 5%;
  }
+ .container-extras{
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-evenly;
+ }
+.btn-modal{
+   margin-top: 5%;
+  border-radius: 20px;
+  margin-left: 25%;
+}

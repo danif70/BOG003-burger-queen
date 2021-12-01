@@ -52,8 +52,9 @@ const ModalBurger = ({ showModal, dataModal, onAdd, setShowModal }) => {
                 </label>
               ))}
             </div>
-            <div><p>ADICIONALES</p></div>
-            <div>
+           
+            <div className='container-extras'>
+            ADICIONALES 
             {TypeExtra.map((item, index) => (
               <label key={item}>
                 <input
@@ -75,7 +76,7 @@ const ModalBurger = ({ showModal, dataModal, onAdd, setShowModal }) => {
             ))}
             </div>
             <button
-              className="btn-cards btn-warning w-50 "
+              className="btn-modal btn-warning w-50 "
               type="submit"
               onClick={() => {
                 onAdd({
