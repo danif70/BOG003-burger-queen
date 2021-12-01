@@ -4,6 +4,7 @@ import Add from '../Imagenes/add.png'
 import Minus from '../Imagenes/minus.png'
 import Delete from '../Imagenes/delete.png'
 import {db} from '../../firebase.js'
+import { collection, addDoc } from "firebase/firestore";
 
 const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
   const totalPrice = order.reduce(
