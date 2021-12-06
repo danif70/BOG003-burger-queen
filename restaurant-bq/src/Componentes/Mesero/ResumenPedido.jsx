@@ -24,11 +24,15 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
       {
         client: client,
         numOrder: count,
-         item: order,
+        item: order,
         totalPrice: totalPrice,
+        date:new Date(),
       },
       console.log("nueva orden")
     );
+
+    /* const q = query(collection (db,"orders"), orderBy("date","desc"));
+    console.log(q); */
   };
 
   return (
