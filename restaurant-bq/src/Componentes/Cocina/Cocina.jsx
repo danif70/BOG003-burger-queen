@@ -3,7 +3,7 @@ import { Header } from "../Header/Header";
 import "../Styles/Cocina.css";
 import { db } from "../../Firebase/firebase.js";
 import { collection, query, onSnapshot } from "firebase/firestore";
-import watch from '../Imagenes/reloj.png'
+import watch from "../Imagenes/reloj.png";
 
 const Cocina = () => {
   const [stateOrder, setstateOrder] = useState([]);
@@ -12,7 +12,8 @@ const Cocina = () => {
     const docSnap = query(collection(db, "orders"));
     onSnapshot(docSnap, (snapshot) => {
       setstateOrder(
-        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+        snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id } ))
+        
       );
       // console.log(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     });
@@ -21,6 +22,8 @@ const Cocina = () => {
   useEffect(() => {
     getCollection();
   }, []);
+
+  
 
   return (
     <Fragment>
@@ -57,9 +60,10 @@ const Cocina = () => {
                 </ul>
               </div>
               <div className="footer-cards-cooker">
-                <div className='chronometer'>
-               <img className='watch-cooker' src={watch} alt="watch"/><p>CRONOMETRO</p>
-               </div>
+                <div className="chronometer">
+                  <img className="watch-cooker" src={watch} alt="watch" />
+                  <p></p>
+                </div>
                 <button className="btn-card-cooker btn-warning  " type="submit">
                   LISTO
                 </button>

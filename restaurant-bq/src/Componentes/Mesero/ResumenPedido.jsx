@@ -4,7 +4,7 @@ import Add from "../Imagenes/add.png";
 import Minus from "../Imagenes/minus.png";
 import Delete from "../Imagenes/delete.png";
 import { db } from "../../Firebase/firebase.js";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, Timestamp} from "firebase/firestore";
 
 const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
   const totalPrice = order.reduce(
@@ -26,10 +26,13 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
         numOrder: count,
          item: order,
         totalPrice: totalPrice,
+        date : new Date(),
+        time : Timestamp.now()
       },
-      console.log("nueva orden")
     );
   };
+
+ 
 
   return (
     <Fragment>
