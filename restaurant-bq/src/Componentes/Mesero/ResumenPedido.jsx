@@ -12,6 +12,7 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
     0
   );
 
+  //let time = new Date()
   // const orderQty = order.map((item) => item.qty);
   // const orderPriceItem = order.map((item) => parseInt(item.price));
 
@@ -26,9 +27,9 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
         numOrder: count,
         item: order,
         totalPrice: totalPrice,
-        date:new Date(),
+        
       },
-      console.log("nueva orden")
+      
     );
 
     /* const q = query(collection (db,"orders"), orderBy("date","desc"));

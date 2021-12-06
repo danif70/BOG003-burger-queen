@@ -4,7 +4,7 @@ import { Mesero } from "./Componentes/Mesero/Mesero";
 import { Historial } from "./Componentes/Historial/Historial";
 import { Cocina } from "./Componentes/Cocina/Cocina";
 import { Home } from "./Componentes/Home/Home";
-import { Error } from "./Componentes/Error/error.jsx"
+import { Error } from "./Componentes/Error/Error.jsx"
 
 function App() {
   return (
