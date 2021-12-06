@@ -1,77 +1,20 @@
+.header-cooker {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat";
+  border-color:  2px red solid;
+}
+
+.hder-cooker a {
+  display: none;
+}
 .container-cooker {
   background-color: #323030;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
-}
-.container-card-cooker {
-  /* background-color: rgba(238, 238, 238, 0.15); */
-  height: 750px;
-  margin-top: 20px;
-  border-radius: 20px;
-  width: 95%;
-  /* box-shadow: 2px 2px 2px 2px rgb(31, 28, 28); */
-  display: flex;
-}
-.hder-cooker a {
-  display: none;
+  border-color: 2px red solid;
 }
 
-.cards-cooker {
-  border-radius: 20px;
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 2%;
-  width: 47%;
-  font-family: "Montserrat";
-  padding-bottom: 2%;
-  height: 50%;
-}
 
-.header-cooker {
-  display: flex;
-  justify-content: space-between;
-  font-family: "Montserrat";
-}
-
-.item-qty {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  width: 95%;
-  height: 235px;
-}
-.list-order {
-  list-style: none;
-  font-size: 20px;
-  font-family: "Montserrat";
-  text-align: center;
-  width: 400px;
-  margin-top: 20px;
-}
-.li-items {
-  margin-top: 15px;
-}
-.li-qty {
-  margin-top: 20px;
-}
-.footer-cards-cooker {
-  margin-top: 10%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-family: "Montserrat";
-}
-.btn-card-cooker {
-  border-radius: 25px;
-  border-style: none;
-  width: 40%;
-  font-weight: bold;
-}
-.watch-cooker{
-  width: 50px ;
-}
-.chronometer{
-  display: flex;  
-}
