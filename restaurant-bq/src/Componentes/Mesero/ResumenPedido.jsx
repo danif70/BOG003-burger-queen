@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState,useEffect } from "react";
 import "../Styles/ResumenPedido.css";
 import Add from "../Imagenes/add.png";
 import Minus from "../Imagenes/minus.png";
@@ -12,12 +12,16 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
     0
   );
 
-  //let time = new Date()
-  // const orderQty = order.map((item) => item.qty);
-  // const orderPriceItem = order.map((item) => parseInt(item.price));
-
+  
+  const [estado,setEstado] = useState ("EN COCINA");
   const [count, setCount] = useState(1);
-  const [client, setClient] = useState("");
+  const [client, setClient] = useState("");  
+
+  const currentDate= new Date()
+  const currentTime = currentDate.getHours()+ ':'+currentDate.getMinutes()+':'+currentDate.getSeconds()
+
+ 
+
 
   const objOrder = async () => {
     await addDoc(
@@ -26,20 +30,20 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
         client: client,
         numOrder: count,
         item: order,
-        totalPrice: totalPrice,
-        
+        totalPrice: totalPrice, 
+        dateInitial: currentTime, 
+        state: estado, 
+               
       },
       
     );
 
-    /* const q = query(collection (db,"orders"), orderBy("date","desc"));
-    console.log(q); */
   };
 
   return (
     <Fragment>
       <div className="header-pedido">
-        <div className="section-cliente">
+        <div className="section-cliente">          
           <label htmlFor="cliente"> Cliente: </label>
           <input
             className="input-cliente"
@@ -73,7 +77,6 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
         {order.map((item) => (
           <div key={item.name}>
             <div className="items-body-pedido">
-              <p className="item-body-name">{item.name}</p>
               <img
                 type="button"
                 className="btn-OnRA"
@@ -109,7 +112,7 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
                 objOrder();
                 setCount(count + 1);
                 setOrder([]);
-                setClient("");   
+                setClient("");                                 
               }}
             >
               ENVIAR PEDIDO

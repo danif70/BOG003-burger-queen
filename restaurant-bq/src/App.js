@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Mesero } from "./Componentes/Mesero/Mesero";
-import { Historial } from "./Componentes/Historial/Historial";
+import { Historial } from "./Componentes/Cocina/Historial";
 import { Cocina } from "./Componentes/Cocina/Cocina";
 import { Home } from "./Componentes/Home/Home";
-import { Error } from "./Componentes/Error/Error.jsx"
+import { Error } from "./Componentes/Error/error.jsx"
 
 function App() {
   return (

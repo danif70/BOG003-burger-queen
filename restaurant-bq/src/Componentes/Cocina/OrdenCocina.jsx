@@ -1,52 +1,22 @@
 import React, { Fragment, useEffect, useState } from "react";
 import watch from "../Imagenes/reloj.png";
 import "../Styles/OrdenCocina.css";
+import {Historial} from "./Historial";
+import { db } from "../../Firebase/firebase.js";
+import {collection, updateDoc, doc } from "firebase/firestore";
 
-const OrdenCocina = ({ oneOrder }) => {
-  const [diff, setDiff] = useState(null);
-  const [initial, setInitial] = useState(null);
-  const [chrono, setChrono] =useState([])
+const OrdenCocina = ({ oneOrder}) => {
+  
+  const [estado2,setEstado2] = useState(oneOrder.state);
+  console.log(oneOrder);
 
-  const clock = () => {
-    setDiff(new Date(+new Date() - initial));
-  };
-  const start = () => {
-    setInitial(+new Date());
-  };
-
-useEffect(()=>{
-  const crono = setTimeout(()=>{
-    start();
-  }, 1000);
-  return ()=> clearTimeout(crono);
-  }, [])
-
-
-  useEffect(() => {
-    if (initial) {
-      requestAnimationFrame(clock);
-    }
-  }, [initial]);
-
-  useEffect(() => { 
-    if (diff) {
-      requestAnimationFrame(clock);
-    }
-  }, [diff]);
-
-
-  const timeFormat = (date) => {
-    if (!date) return "00:00";
-    let mm = date.getUTCMinutes();
-    let ss = date.getSeconds();
+  const actualizar = async () =>{
+    console.log(estado2);
+        await updateDoc(doc(db, 'orders', oneOrder.id), {state: estado2})
+      
+  }
     
-    mm = mm < 10 ? "0" + mm : mm;
-    ss = ss < 10 ? "0" + ss : ss;
     
-
-    return `${mm}:${ss}`;
-  };
-
   return (
     <Fragment>
       
@@ -55,19 +25,18 @@ useEffect(()=>{
       overflow-auto"
       >
         <div className="card-header header-cooker">
+        
           <p>{oneOrder.client}</p>
           <p>{oneOrder.numOrder}</p>
-        </div>
-        <div className="chronometer">
           <img
             className="watch-cooker"
-            /* onClick={start} */
             src={watch}
             alt="watch"
           />
-         {/*  {setWatch( */}<p className="timer">{timeFormat(diff)}</p>{/* )} */}
+          <p>{oneOrder.dateInitial}</p>
+          
         </div>
-        <div className="item-qty">
+         <div className="item-qty">
           <ul className="list-order">
             ITEM
             {oneOrder.item.map((item) => (
@@ -86,12 +55,25 @@ useEffect(()=>{
           </ul>
         </div>
         <div className="footer-cards-cooker">
-          <button className="btn-card-cooker btn-warning  " type="submit">
-            LISTO {/* //aqui se debería llamar al componente de pedidos listos y mandarle como props el estado final del cronómetro ( que aún no he logrado programar🥴), también pensar en hacer el crono en el componente resumen pedido y que se inicie con el enviar pedido, y que su estado pase aquí como props */}
-          </button>
+          <button onClick={()=>{setEstado2("orden Lista")
+          }}       
+          className="btn-card-cooker btn-warning" 
+          type="submit">
+           { estado2 } 
+          </button>  
+          <button onClick={()=>actualizar()}       
+          className="btn-card-cooker btn-warning" 
+          type="submit">
+          ACTUALIZAR 
+          </button> 
+
         </div>
       </div>
-      
+      {/* <Historial  
+      oneOrder={oneOrder}
+      estado = {estado2}
+      setEstado = {setEstado2}
+      /> */}
     </Fragment>
   );
 };
