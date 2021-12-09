@@ -4,7 +4,7 @@ import Add from "../Imagenes/add.png";
 import Minus from "../Imagenes/minus.png";
 import Delete from "../Imagenes/delete.png";
 import { db } from "../../Firebase/firebase.js";
-import { collection, addDoc, Timestamp} from "firebase/firestore";
+import { collection, query, addDoc, orderBy, limit } from "firebase/firestore";
 
 const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
   const totalPrice = order.reduce(
@@ -12,11 +12,15 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
     0
   );
 
+  //let time = new Date()
   // const orderQty = order.map((item) => item.qty);
   // const orderPriceItem = order.map((item) => parseInt(item.price));
 
   const [count, setCount] = useState(1);
   const [client, setClient] = useState("");
+  // const [numOrder, setNumOrder] = uses
+  const dateOrder = new Date();
+  const timeOrder =dateOrder.getHours() + ' : ' + dateOrder.getMinutes() + ' : ' + dateOrder.getSeconds()
 
   const objOrder = async () => {
     await addDoc(
@@ -24,14 +28,17 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
       {
         client: client,
         numOrder: count,
-         item: order,
+        item: order,
         totalPrice: totalPrice,
-        date : new Date(),
-        time : Timestamp.now()
+        dateInitial : timeOrder
+      
       },
+      
     );
   };
-
+  
+//  console.log( "orders".docs);
+  
  
 
   return (
@@ -105,7 +112,7 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
               className="btn-cards btn-warning w-50"
               onClick={() => {
                 objOrder();
-                setCount(count + 1);
+                setCount(count + 1 );
                 setOrder([]);
                 setClient("");   
               }}
