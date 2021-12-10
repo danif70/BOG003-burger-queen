@@ -1,0 +1,63 @@
+.cards-historial {
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 2%;
+  width: 90%;
+  font-family: "Montserrat";
+  height: auto;
+}
+
+.header-historial {
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-qty-historial {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 95%;
+  height: 150px;
+}
+
+.list-order-historial {
+  list-style: none;
+  font-size: 20px;
+  font-family: "Montserrat";
+  text-align: center;
+  width: 400px;
+  margin-top: 20px;
+}
+
+/*.li-items {
+    margin-top: 15px;
+  }
+  
+  .li-qty {
+    margin-top: 20px;
+  }*/
+
+.line {
+  width: 90%;
+  height: 1%;
+  color: #ffc107;
+  margin-left: 5%;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7%;
+  padding-left: 5%;
+  justify-content: space-around;
+}
+
+.btn-card-historial {
+    border-radius: 25px;
+    border-style: none;
+    width: 40%;
+    font-weight: bold;
+  }
+  
+  

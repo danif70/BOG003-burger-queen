@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import "../Styles/ResumenPedido.css";
 import Add from "../Imagenes/add.png";
 import Minus from "../Imagenes/minus.png";
@@ -6,40 +6,33 @@ import Delete from "../Imagenes/delete.png";
 import { db } from "../../Firebase/firebase.js";
 import { collection, query, addDoc, orderBy, limit } from "firebase/firestore";
 
-const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
+const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
   const totalPrice = order.reduce(
     (price, items) => price + items.qty * items.price,
     0
   );
 
-  //let time = new Date()
-  // const orderQty = order.map((item) => item.qty);
-  // const orderPriceItem = order.map((item) => parseInt(item.price));
-
+  const [estado, setEstado] = useState("LISTO");
   const [count, setCount] = useState(1);
   const [client, setClient] = useState("");
-  // const [numOrder, setNumOrder] = uses
-  const dateOrder = new Date();
-  const timeOrder =dateOrder.getHours() + ' : ' + dateOrder.getMinutes() + ' : ' + dateOrder.getSeconds()
+  const [finalTime, setFinalTime] = useState("");
+
+  const date = new Date();
+  const currentDate = Date.parse(date);
 
   const objOrder = async () => {
-    await addDoc(
-      collection(db, "orders"),
-      {
-        client: client,
-        numOrder: count,
-        item: order,
-        totalPrice: totalPrice,
-        dateInitial : timeOrder
-      
-      },
-      
-    );
+    await addDoc(collection(db, "orders"), {
+      client: client,
+      numOrder: count,
+      item: order,
+      totalPrice: totalPrice,
+      dateInitial: currentDate,
+      preparationTime: finalTime,
+      state: estado,
+    });
   };
-  
-//  console.log( "orders".docs);
-  
- 
+
+  //  console.log( "orders".docs);
 
   return (
     <Fragment>
@@ -58,8 +51,7 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
           />
         </div>
         <div className="contador-pedido">
-          <p> # Pedido </p>
-          <p className="contador">{count}</p>
+          <p> # Pedido { count }</p>
         </div>
       </div>
 
@@ -78,7 +70,6 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
         {order.map((item) => (
           <div key={item.name}>
             <div className="items-body-pedido">
-              <p className="item-body-name">{item.name}</p>
               <img
                 type="button"
                 className="btn-OnRA"
@@ -112,16 +103,15 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll}) => {
               className="btn-cards btn-warning w-50"
               onClick={() => {
                 objOrder();
-                setCount(count + 1 );
+                setCount(count + 1);
                 setOrder([]);
-                setClient("");   
+                setClient("");
               }}
             >
               ENVIAR PEDIDO
             </button>
           ) : (
             <div className="no-order">ORDEN VACIA O SIN NOMBRE</div>
-            
           )}
         </div>
       </div>

@@ -1,0 +1,31 @@
+.container-historial {
+  background-color: #323030;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.container-historial-cards {
+    background-color: rgba(238, 238, 238, 0.15);
+    height: 760px;
+    margin-top: 40px;
+    border-radius: 20px;
+    width:53%;
+    box-shadow: 2px 2px 2px 2px rgb(31, 28, 28);    
+    justify-content: center;
+  }
+
+
+
+.container-archived {
+    background-color: rgba(238, 238, 238, 0.15);
+    height: 760px;
+    border-radius: 20px;
+    width: 38%;
+    margin-top: 40px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px 2px rgb(31 28 28);
+}

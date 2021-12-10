@@ -7,12 +7,11 @@
  
 }
 .container-menu {
-  /* border: 5px solid red; */
+
   background-color: rgba(238, 238, 238, 0.15);
   height: 650px;
   margin-top: 40px;
   border-radius: 20px;
-  /* margin-left: 2%; */
   width:53%;
   box-shadow: 2px 2px 2px 2px rgb(31, 28, 28);
 }

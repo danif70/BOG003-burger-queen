@@ -3,11 +3,9 @@ import Logo from '../Imagenes/logo.png'
 import HomeImg from '../Imagenes/casa.png'
 import "../Styles/Header.css"
 
-
 const HeaderCooker = () => {
   return (
     <Fragment>
-
       <header className="container-hdr">
         <img className="logo-hdr" src={Logo} />
         <div className="icons-container">
@@ -17,6 +15,4 @@ const HeaderCooker = () => {
     </Fragment>
   )
 }
-
-
 export { HeaderCooker }
