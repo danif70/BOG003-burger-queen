@@ -4,6 +4,7 @@ import { CardsHistorial } from "./CardsHistorial";
 import "../Styles/Historial.css";
 import { db } from "../../Firebase/firebase.js";
 import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
+import { OrderArchived } from "./PedidosArchivados";
 
 const Historial = () => {
   const [stateHistorial, setStateHistorial] = useState([]);
@@ -40,7 +41,14 @@ const Historial = () => {
             )
           )}
         </div>
-        <div className='container-archived'>HOLA</div>
+        <div className='container-archived'>
+          {stateHistorial.map((oneArchived)=> 
+          < OrderArchived 
+          key={oneArchived.id}
+          oneArchived = {oneArchived}
+          />
+          )}  
+        </div>
       </div>
     </Fragment>
   );

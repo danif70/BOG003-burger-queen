@@ -1,7 +1,22 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "../Styles/CardsHistorial.css";
+import { db } from "../../Firebase/firebase.js";
+import { doc, updateDoc } from "firebase/firestore";
 
 const CardsHistorial = ({ oneHistorial }) => {
+
+  const [estado3, setEstado3] = useState (oneHistorial.state);
+  console.log(estado3);
+
+  const actualizarArchived = async (state) => {
+   
+   await updateDoc(doc(db, "orders", oneHistorial.id), {
+     state: state,
+     
+   });
+   setEstado3(state);
+ }; 
+
   return (
     <Fragment>
       {oneHistorial.state === "ENTREGADO" ? (
@@ -42,8 +57,8 @@ const CardsHistorial = ({ oneHistorial }) => {
           <span className="line">_____________________________</span>
           <div className='total'>
             <p>TOTAL $ { oneHistorial.totalPrice }</p>
-            <button className="btn-card-historial btn-warning" type="submit">
-              {oneHistorial.state}
+            <button className="btn-card-historial btn-warning" type="submit" onClick={()=>actualizarArchived("ARCHIVADO")}>
+              {estado3}
             </button>
           </div>
         </div>
