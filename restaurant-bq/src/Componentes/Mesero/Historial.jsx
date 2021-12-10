@@ -41,7 +41,8 @@ const Historial = () => {
             )
           )}
         </div>
-        <div className='container-archived'>
+        <div className='container-archived overflow-auto row row-cols-1 row-cols-md-2 g-4 overflow-auto'>
+        <h1>PEDIDOS ENTREGADOS</h1>
           {stateHistorial.map((oneArchived)=> 
           < OrderArchived 
           key={oneArchived.id}
