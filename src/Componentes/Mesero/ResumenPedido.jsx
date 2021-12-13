@@ -7,10 +7,16 @@ import { db } from "../../Firebase/firebase.js";
 import { collection, query, addDoc, orderBy, limit } from "firebase/firestore";
 
 const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
-  const totalPrice = order.reduce(
+  const [totalPrice, setTotalPrice] = useState(0)
+
+
+  useEffect(() => {
+  const newTotalPrice = order.reduce(
     (price, items) => price + items.qty * items.price,
     0
   );
+  setTotalPrice(newTotalPrice)
+}, [order]);
 
   const [estado, setEstado] = useState("LISTO");
   const [count, setCount] = useState(1);
