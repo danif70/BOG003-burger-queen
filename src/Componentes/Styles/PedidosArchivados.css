@@ -5,7 +5,7 @@
     border-radius: 20px;
     width: 90%;
     box-shadow: 2px 2px 2px 2px rgb(31 28 28);
-    justify-content: space-between;
+    justify-content:space-around;
     display: flex;
     align-items: center;
     font-size: 20px;
