@@ -10,12 +10,7 @@ import { collection, query, onSnapshot } from "firebase/firestore";
 
 const Header = () => {
   const [stateNotification, setStateNotification] = useState([]);
-  const notificationArray = [0]
-
-  /* const acumulator = () => {
-    const addNotification = () => notificationArray.push('x')
-    const number = notificationArray.length 
-    return number} */
+  const [count, setCount] = useState(0)
   
   const getNotification = () => {
     const docSnap = query(collection(db, "orders"));
@@ -25,6 +20,9 @@ const Header = () => {
       );
     });
   };
+  const acumulator = () => {
+    setCount(count + 1)
+  }
   useEffect(() => {
     getNotification();
   }, []);
@@ -37,7 +35,7 @@ const Header = () => {
         <div className="icons-container">
         <a className="a-add "  href="/mesero"><img className="add-sign add" src={ AddImg } /></a>
         <a  className="a-add "  href="/historial "><img className="bell" src={ Bell } /></a>
-        {stateNotification.map((item)=>{return item.state === 'ENTREGADO' ? <span>x</span> : ''})}
+        {stateNotification.map((item)=>{return item.state === 'ENTREGADO' ? acumulator() (<span>{ count }</span>) : ''})}
         
         <a className="a-add " href="/"><img className="little-house" src={ HomeImg } /></a>
         </div>

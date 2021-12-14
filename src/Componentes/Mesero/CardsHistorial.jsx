@@ -5,7 +5,7 @@ import { doc, updateDoc } from "firebase/firestore";
 
 const CardsHistorial = ({ oneHistorial }) => {
   const [estado3, setEstado3] = useState(oneHistorial.state);
-  console.log(estado3);
+  //console.log(estado3);
 
   const actualizarArchived = async (state) => {
     await updateDoc(doc(db, "orders", oneHistorial.id), {
