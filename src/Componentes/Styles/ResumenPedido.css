@@ -54,9 +54,13 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Montserrat";
   margin-right: 20px;
+}
+.item-name {
+  width: 10%;
+  font-size: 14px;
 }
 .item-body-name {
   width: 20%;
@@ -69,8 +73,8 @@
   text-align: center;
   align-items: center;
   background-color: transparent;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 .item-data {
   margin-bottom: 0;

@@ -25,7 +25,7 @@ const CardsHistorial = ({ oneHistorial }) => {
             <p>{oneHistorial.client}</p>
             <p> Tiempo: {oneHistorial.preparationTime}</p>
           </div>
-          <div className="item-qty-historial">
+          <div className="item-qty-historial overflow-auto">
             <ul className="list-order-historial">
               ITEM
               {oneHistorial.item.map((item) => (

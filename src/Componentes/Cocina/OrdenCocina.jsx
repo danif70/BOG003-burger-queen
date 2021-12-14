@@ -49,7 +49,7 @@ const OrdenCocina = ({ oneOrder }) => {
             <p>{oneOrder.client}</p>
             <p>{orderDate}</p>
           </div>
-          <div className="item-qty">
+          <div className="item-qty overflow-auto ">
             <ul className="list-order">
               ITEM
               {oneOrder.item.map((item) => (
@@ -67,7 +67,7 @@ const OrdenCocina = ({ oneOrder }) => {
               ))}
             </ul>
           </div>
-          <div className="footer-cards-cooker">
+          <footer className="footer-cards-cooker">
             <button
               onClick={() => {
                 actualizar("ENTREGADO");
@@ -77,7 +77,7 @@ const OrdenCocina = ({ oneOrder }) => {
             >
               {estado2}
             </button>
-          </div>
+          </footer>
         </div>
       ) : (
         ""

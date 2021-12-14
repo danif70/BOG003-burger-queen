@@ -59,6 +59,8 @@
   border-style: none;
   width: 40%;
   font-weight: bold;
+  position: absolute;
+  top: 85%;
 }
 
 .watch-cooker {

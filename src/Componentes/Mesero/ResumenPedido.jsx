@@ -76,6 +76,7 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
         {order.map((item) => (
           <div key={item.name}>
             <div className="items-body-pedido">
+              <p className="item-name">{item.name}</p>
               <img
                 type="button"
                 className="btn-OnRA"
