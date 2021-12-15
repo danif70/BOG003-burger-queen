@@ -10,7 +10,7 @@
 }
 
 .btn-cards {
-   
+    width: 50%;
     border-radius: 20px;
     border-style: none;
     font-size: 18px;
@@ -22,4 +22,11 @@
 }
 
 
-
+@media (orientation: portrait){
+.btn-cards{
+    width: 70%;
+}
+.card-header{
+    font-size: 21px;
+}
+}

@@ -8,7 +8,7 @@
 
 .container-historial-cards {
   background-color: rgba(238, 238, 238, 0.15);
-  height: 760px;
+  height: 75%;
   margin-top: 40px;
   border-radius: 20px;
   width: 53%;
@@ -18,7 +18,7 @@
 
 .container-archived {
   background-color: rgba(238, 238, 238, 0.15);
-  height: 760px;
+  height: 75%;
   border-radius: 20px;
   width: 38%;
   margin-top: 40px;

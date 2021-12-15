@@ -4,12 +4,11 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
- 
 }
 .container-menu {
 
   background-color: rgba(238, 238, 238, 0.15);
-  height: 650px;
+  height: 60%;
   margin-top: 40px;
   border-radius: 20px;
   width:53%;
@@ -19,7 +18,7 @@
 .container-order{
   
   background-color: rgba(238, 238, 238, 0.15);
-  height: 650px;
+  height: 60%;
   border-radius: 20px;
   width:37%;
   margin-top: 40px;
@@ -28,4 +27,13 @@
   font-weight: bold;
   box-shadow: 2px 2px 2px 2px rgb(31, 28, 28);
  
+}
+
+@media (orientation: portrait){
+  .container-menu{
+    height: 70%;
+  }
+  .container-order{
+    height: 70%;
+  }
 }

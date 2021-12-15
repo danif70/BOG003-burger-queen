@@ -25,7 +25,7 @@ const Cards = ({ dataProduct, onAdd}) => {
             <div>
               <button
                 onClick={() => setShowModal(true)}
-                className="btn-cards btn-warning w-50 "
+                className="btn-cards btn-warning"
                 type="button"
               >
                 OPCIONES
@@ -43,7 +43,7 @@ const Cards = ({ dataProduct, onAdd}) => {
             <div>
               <button
                 onClick={() => onAdd(dataProduct)}
-                className="btn-cards btn-warning w-50 "
+                className="btn-cards btn-warning"
                 type="submit"
               >
                 AGREGAR

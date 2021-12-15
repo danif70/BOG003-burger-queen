@@ -5,6 +5,7 @@
 
 .logo-hdr {
   width: 25%;
+  /* height: 60%; */
 }
 .icons-container {
   display: flex;
@@ -25,3 +26,11 @@
   font-size: 18px;
 }
 
+@media (orientation: portrait) {
+  .logo-hdr {
+    width: 25%;
+    height: 60%;
+    margin-top: 3%;
+  }
+
+}

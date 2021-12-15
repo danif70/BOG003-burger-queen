@@ -96,3 +96,14 @@
 .no-order {
   margin-left: 25px;
 }
+
+
+
+@media (orientation: portrait) {
+  .title-body-pedido {
+    margin-left: -10px;
+}
+  .input-cliente{
+    margin-left: 16px;
+  }
+}

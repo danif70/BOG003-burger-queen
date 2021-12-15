@@ -5,7 +5,7 @@
   margin-left: 2%;
   width: 90%;
   font-family: "Montserrat";
-  height: 50%;
+  height: 46%;
 }
 
 .header-historial {
@@ -31,13 +31,6 @@
   margin-top: 20px;
 }
 
-/*.li-items {
-    margin-top: 15px;
-  }
-  
-  .li-qty {
-    margin-top: 20px;
-  }*/
 
 .line {
   width: 90%;
@@ -60,4 +53,12 @@
     font-weight: bold;
   }
   
-  
+  @media (orientation: portrait){
+
+    .cards-historial{
+      height: 35%;
+    }
+    .btn-card-historial{
+      width: 45%;
+    }
+  }
