@@ -6,12 +6,9 @@
 ## Realizado por Daniela Funes, Keiry Quero y Lorena Marroquín.
 
 ![Logo](src/Componentes/Imagenes/logo.png)
-## Índice
 
-- [Burger Queen](#burger-queen)
-  - [https://bq-react-web.herokuapp.com/](#httpsbq-react-webherokuappcom)
-  - [Realizado por Daniela Funes, Keiry Quero y Lorena Marroquín.](#realizado-por-daniela-funes-keiry-quero-y-lorena-marroquín)
-  - [Índice](#índice)
+
+### [Índice](#índice)
   - [1. Resumen del proyecto](#1-resumen-del-proyecto)
   - [2. Historias de Usuario](#2-historias-de-usuario)
   - [3. Prototipos](#3-prototipos)
