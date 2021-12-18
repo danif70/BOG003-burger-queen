@@ -45,7 +45,7 @@ const OrdenCocina = ({ oneOrder }) => {
           className="cards-cooker text-center col-sm-2 card bg-light mb-3
       overflow-auto"
         >
-          <div className="card-header header-cooker">
+          <div className="card-header header-cooker vw-100">
             <p>{oneOrder.client}</p>
             <p>{orderDate}</p>
           </div>

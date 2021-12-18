@@ -19,6 +19,9 @@
   padding-bottom: 2%;
   height: 50%;
 }
+.card-header {
+  margin-left: -2%;
+}
 
 .item-qty {
   display: flex;

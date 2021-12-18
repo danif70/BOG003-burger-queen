@@ -6,7 +6,7 @@ import "../Styles/Header.css"
 const HeaderCooker = () => {
   return (
     <Fragment>
-      <header className="container-hdr">
+      <header className="container-hdr vw-100">
         <img className="logo-hdr" src={Logo} />
         <div className="icons-container">
         <a className="a-add " href="/"><img className="little-house" src={ HomeImg } /></a>
