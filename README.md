@@ -39,19 +39,19 @@ A medida que l@s meser@s y el/la chef hagan uso de la misma, esta se irá actual
 
 ## 3. Prototipos en Figma
 
-![Prototipo Inicio Vertical](src\Componentes\Imagenes\prototipo-inicioVertical.png)
+![Prototipo Inicio Vertical](src/Componentes/Imagenes/prototipo-inicioVertical.png)
 
-![Prototipo Inicio Horizontal](src\Componentes\Imagenes\prototipo-pantallaInicio.png)
+![Prototipo Inicio Horizontal](src/Componentes/Imagenes/prototipo-pantallaInicio.png)
 
-![Prototipo Vista Mesero](src\Componentes\Imagenes\prototipo-pantallaMesero.png)
+![Prototipo Vista Mesero](src/Componentes/Imagenes/prototipo-pantallaMesero.png)
 
-![Prototipo Vista Mesero Vertical](src\Componentes\Imagenes\prototipo-meseroVertical.png)
+![Prototipo Vista Mesero Vertical](src/Componentes/Imagenes/prototipo-meseroVertical.png)
 
-![Prototipo detalle pedido](src\Componentes\Imagenes\prototipo-detallePedido.png)
+![Prototipo detalle pedido](src/Componentes/Imagenes/prototipo-detallePedido.png)
 
-![Prototipo Vista Chef](src\Componentes\Imagenes\prototipo-vistaChef.png)
+![Prototipo Vista Chef](src/Componentes/Imagenes/prototipo-vistaChef.png)
 
-![Prototipo Pedidos Listos y Archivados](src\Componentes\Imagenes\prototipo-pedidosListosyArchivados.png)
+![Prototipo Pedidos Listos y Archivados](src/Componentes/Imagenes/prototipo-pedidosListosyArchivados.png)
 
 ## 4. Versión Final
 
