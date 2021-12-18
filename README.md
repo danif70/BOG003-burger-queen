@@ -37,17 +37,17 @@ A medida que l@s meser@s y el/la chef hagan uso de la misma, esta se irá actual
 
 ## 3. Prototipos
 
-![Prototipo Baja Resolución](src\Componentes\Imagenes\protBaja1.png) 
+![Prototipo Baja Resolución](src/Componentes/Imagenes/protBaja1.png) 
 
-![Prototipo Baja Resolución](ssrc\Componentes\Imagenes\protBaja2.png) 
+![Prototipo Baja Resolución](src/Componentes/Imagenes/protBaja2.png) 
 
 
 ## 4. Versión Final
 
-![Vista Inicial](src\Componentes\Imagenes\vistaInicio.png) ![Vista Mesero](src\Componentes\Imagenes\vistaMeseroPedido.png)
-![Vista Modal](src\Componentes\Imagenes\vistaModal.png) ![Vista Mesero Vertical](src\Componentes\Imagenes\vistaVerticalMesero.png)
-![Vista Cocina](src\Componentes\Imagenes\vistaCocina.png) ![Vista Vertical Entregados](src\Componentes\Imagenes\vistaVerticalEntregados.png)
-![Vista Entregados](src\Componentes\Imagenes\vistaPedidoEntregar.png)
+![Vista Inicial](src/Componentes/Imagenes/vistaInicio.png) ![Vista Mesero](src/Componentes/Imagenes/vistaMeseroPedido.png)
+![Vista Modal](src/Componentes/Imagenes/vistaModal.png) ![Vista Mesero Vertical](src/Componentes/Imagenes/vistaVerticalMesero.png)
+![Vista Cocina](src/Componentes/Imagenes/vistaCocina.png) ![Vista Vertical Entregados](src/Componentes/Imagenes/vistaVerticalEntregados.png)
+![Vista Entregados](src/Componentes/Imagenes/vistaPedidoEntregar.png)
 
 
 
