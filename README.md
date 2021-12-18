@@ -14,12 +14,10 @@
   - [Índice](#índice)
   - [1. Resumen del proyecto](#1-resumen-del-proyecto)
   - [2. Historias de Usuario](#2-historias-de-usuario)
-  - [3. Prototipos en Figma](#3-prototipos-en-figma)
+  - [3. Prototipos](#3-prototipos)
   - [4. Versión Final](#4-versión-final)
 
 ***
-
-
 
 ## 1. Resumen del proyecto
 
@@ -37,25 +35,20 @@ A medida que l@s meser@s y el/la chef hagan uso de la misma, esta se irá actual
  3 - Yo como meserx quiero saber que hay pedidos listos, verlos en pantalla y así poder entregarlos rápidamente.
 
 
-## 3. Prototipos en Figma
+## 3. Prototipos
 
-<!-- ![Prototipo Inicio Vertical](src/Componentes/Imagenes/prototipo-inicioVertical.png) -->
-<img src= "C:\DocumentsC\Laboratoria\BOG003-burger-queen\src\Componentes\Imagenes\prototipo-inicioVertical.png" width="150">
+![Prototipo Baja Resolución](src\Componentes\Imagenes\protBaja1.png) 
 
-<!-- ![Prototipo Inicio Horizontal](src/Componentes/Imagenes/prototipo-pantallaInicio.png) -->
-<img src= "C:\DocumentsC\Laboratoria\BOG003-burger-queen\src\Componentes\Imagenes\prototipo-pantallaInicio.png" width="300">
+![Prototipo Baja Resolución](ssrc\Componentes\Imagenes\protBaja2.png) 
 
-![Prototipo Vista Mesero](src/Componentes/Imagenes/prototipo-pantallaMesero.png)
-
-![Prototipo Vista Mesero Vertical](src/Componentes/Imagenes/prototipo-meseroVertical.png)
-
-![Prototipo detalle pedido](src/Componentes/Imagenes/prototipo-detallePedido.png)
-
-![Prototipo Vista Chef](src/Componentes/Imagenes/prototipo-vistaChef.png)
-
-![Prototipo Pedidos Listos y Archivados](src/Componentes/Imagenes/prototipo-pedidosListosyArchivados.png)
 
 ## 4. Versión Final
+
+![Vista Inicial](src\Componentes\Imagenes\vistaInicio.png) ![Vista Mesero](src\Componentes\Imagenes\vistaMeseroPedido.png)
+![Vista Modal](src\Componentes\Imagenes\vistaModal.png) ![Vista Mesero Vertical](src\Componentes\Imagenes\vistaVerticalMesero.png)
+![Vista Cocina](src\Componentes\Imagenes\vistaCocina.png) ![Vista Vertical Entregados](src\Componentes\Imagenes\vistaVerticalEntregados.png)
+![Vista Entregados](src\Componentes\Imagenes\vistaPedidoEntregar.png)
+
 
 
 
