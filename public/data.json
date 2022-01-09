@@ -17,7 +17,7 @@
   },
   {
     "id": "3",
-    "name": "Sandwich de Jamón y Queso",
+    "name": "Sandwich de J&Q",
     "type": "DESAYUNOS",
     "submenu": "",
     "price": "10",
@@ -25,7 +25,7 @@
   },
   {
     "id": "4",
-    "name": "Jugo de Frutas natural",
+    "name": "Jugo de Frutas",
     "type": "DESAYUNOS",
     "submenu": "",
     "price": "7",
@@ -33,7 +33,7 @@
   },
   {
     "id": "5",
-    "name": "Hamburguesa Simple",
+    "name": "Hamb. Simple",
     "type": "COMIDAS",
     "submenu": "Burger",
     "price": "10",
@@ -47,7 +47,7 @@
   },
   {
     "id": "6",
-    "name": "Hamburguesa Doble",
+    "name": "Hamb. Doble",
     "type": "COMIDAS",
     "submenu": "Burger",
     "price": "15",

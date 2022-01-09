@@ -34,7 +34,7 @@
 }
 .body-pedido {
   height: 70%;
-  overflow:scroll;
+  overflow: scroll;
 }
 .title-body-pedido {
   display: flex;
@@ -42,14 +42,14 @@
   justify-content: space-between;
   text-indent: 36px; /*especifica la sangría de la primera línea de un texto*/
   margin-left: 5px;
-  margin-right: 5px;
+  margin-right: 15px;
   font-size: 20px;
   font-weight: 700;
   font-family: "Montserrat";
 }
 
 .items-body-pedido {
-  overflow:scroll;
+  overflow: scroll;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -69,7 +69,7 @@
 }
 .btn-OnRA {
   display: flex;
-  align-items:baseline;
+  align-items: baseline;
   text-align: center;
   align-items: center;
   background-color: transparent;
@@ -83,27 +83,32 @@
   display: flex;
   justify-content: space-around;
   font-size: 20px;
-  
 }
 .total-price {
   text-align: right;
   font-size: 30px;
   font-weight: 700;
   margin-right: 20px;
-
-
 }
 .no-order {
   margin-left: 25px;
 }
-
-
+.btn-enviar {
+  font-size: 30px;
+  margin-top: 20px;
+}
 
 @media (orientation: portrait) {
   .title-body-pedido {
     margin-left: -10px;
-}
-  .input-cliente{
+    margin-right: 9px;
+    font-size: 18px;
+  }
+  .input-cliente {
     margin-left: 16px;
+  }
+  .btn-enviar {
+    font-size: 26px;
+    margin-top: 36px;
   }
 }

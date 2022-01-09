@@ -107,7 +107,7 @@ const ResumenPedido = ({ order, setOrder, onAdd, onRemove, onRemoveAll }) => {
           {order.length !== 0 && client.length !== 0 ? (
             <button
               type="submit"
-              className="btn-cards btn-warning w-50"
+              className="btn-cards btn-warning w-50 btn-enviar"
               onClick={() => {
                 objOrder();
                 setCount(count + 1);

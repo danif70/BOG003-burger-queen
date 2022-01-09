@@ -9,8 +9,8 @@ const OrderArchived = ({ oneArchived }) => {
       {oneArchived.state === "ARCHIVADO" ? (
         <div className="card-archived">
           <img src={check} alt="check" className="check" />
-          <p>{oneArchived.preparationTime} </p>
-          <p>{oneArchived.client} </p>
+          <p className="item-archived" >{oneArchived.preparationTime} </p>
+          <p className="item-archived" >{oneArchived.client} </p>
         </div>
       ) : (
         ""

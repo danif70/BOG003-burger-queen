@@ -5,13 +5,31 @@
     border-radius: 20px;
     width: 90%;
     box-shadow: 2px 2px 2px 2px rgb(31 28 28);
-    justify-content:space-around;
+   /*  justify-content:space-around; */
     display: flex;
     align-items: center;
     font-size: 20px;
     font-family: "Montserrat";
+    
+}
+
+.item-archived {
+    margin-left: 6rem;
+    margin-top: 14px;
 }
 
 .check{
     width: 10%;   
+}
+
+@media (orientation: portrait){
+
+    .item-archived {
+        margin-left: 2rem;
+    }
+    .check {
+        width: 14%;
+        margin-left: 10px;
+    }
+
 }
