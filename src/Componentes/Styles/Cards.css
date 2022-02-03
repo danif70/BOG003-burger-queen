@@ -10,8 +10,17 @@
     
 }
 
+.card-body {
+    display:list-item;
+  margin-top: 0;
+    height: 1%;
+}
+.card-text {
+    margin-bottom: 0;
+}
+
 .btn-cards {
-    width: 50%;
+    width: 60%;
     border-radius: 20px;
     border-style: none;
     font-size: 18px;
@@ -19,15 +28,15 @@
 }
 
 .img-cards{
-    width: 30%;
-    height: 40%;
+    width: 25%;
+    height: 35%;
 }
 
 
 @media (orientation: portrait){
 .btn-cards{
-    width: 70%;
-    margin-top: 60px;
+    width: 80%;
+    margin-top: 10px;
 }
 .card-header{
     font-size: 21px;

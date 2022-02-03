@@ -1,7 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import watch from "../Imagenes/reloj.png";
 import "../Styles/OrdenCocina.css";
-//import {Historial} from "./Historial";
 import { db } from "../../Firebase/firebase.js";
 import { collection, updateDoc, doc } from "firebase/firestore";
 
@@ -21,8 +19,8 @@ const OrdenCocina = ({ oneOrder }) => {
   let date = new Date(),
     currentDate = Date.parse(date),
     final = currentDate - oneOrder.dateInitial;
-   const orderDate = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
-   
+  const orderDate =
+    date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 
   let msToTime = (final) => {
     let seconds = Math.floor((final / 1000) % 60),
